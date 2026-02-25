@@ -1,0 +1,243 @@
+.carousel-wrap {
+  position: relative;
+}
+
+.product-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0.5rem;
+  scrollbar-width: none;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 calc(33.33% - 20px);
+  min-width: 250px;
+  background: #f4f4f4;
+  border-radius: 15px;
+  padding: 1.8rem 1rem;
+  scroll-snap-align: start;
+  border: 1px solid #f4f4f4;
+  transition: transform 0.2s;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+}
+
+.product-card img {
+  max-width: 240px;
+  margin: 0 auto;
+  display: flex;
+  width: 90vw;
+  height: 40vh;
+  object-fit: contain;
+  position: relative;
+  z-index: 9;
+}
+
+.product-card .product-content {
+  display: none;
+}
+
+.product-card h3 {
+  color: #254f1f;
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.product-card .price {
+  font-weight: 700;
+  color: #cd5959;
+  background: #fff;
+  border-radius: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+}
+
+.product-card .price .value {
+  padding: 0.3rem 0.6rem;
+  display: block;
+}
+
+.product-card .btn-product {
+  background: #000;
+  border: 2px solid #000;
+  color: #fff;
+  box-shadow: none;
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.product-card .btn-product:hover {
+  background: #3c3a3a;
+  border: 2px solid #3c3a3a;
+}
+
+/* Estilo base do product-card */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Estilo da imagem */
+.product-card img {
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+/* Efeito hover na imagem - reduzir tamanho */
+.product-card:hover img {
+  transform: scale(0.7) translateY(-40%);
+}
+
+/* Estilo base do product-content (invisível) */
+.product-card .product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -100px; /* Começa fora da div */
+  left: 0;
+  width: 100%;
+  background: rgba(58, 54, 54, 0.95);
+  padding: 1.5rem 0rem;
+  border-radius: 15px;
+  transition: bottom 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Efeito hover no product-content - subir até o centro */
+.product-card:hover .product-content {
+  bottom: 27%;
+  height: 30vh;
+  transform: translateY(50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajuste para manter o texto legível */
+.product-card .product-content h3 {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0.5rem 0 0rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease, transform 1s ease;
+}
+
+.product-card:hover h3 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.product-card .product-content .card-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 2s ease, transform 1.5s ease;
+}
+
+.product-card:hover .card-footer {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.product-card .product-content .price {
+  font-weight: 700;
+  color: #7c5e1a;
+  background: #fdf5d6;
+  padding: 0.3rem 1rem;
+  border-radius: 40px;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+/* Remover o display:none anterior */
+.product-card .product-content {
+  display: flex; /* Mudando de none para flex */
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3c3a3a73;
+  border: 1px solid #cde0bf;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 5;
+  font-weight: bold;
+  box-shadow: 0 6px 14px rgba(0, 30, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.carousel-arrow:hover {
+  background: #3c3a3a;
+  transform: translateY(-50%) scale(1.05); /* Slightly enlarge on hover */
+}
+
+.carousel-arrow.left {
+  left: -10px;
+}
+
+.carousel-arrow.right {
+  right: -10px;
+}
+
+@media screen and (max-width: 991px) {
+    .product-card .product-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+  .product-card {
+    flex: 0 0 calc(50% - 6px);
+  }
+}
+
+@media (max-width: 630px) {
+  .product-card {
+    flex: 0 0 calc(103% - 0px);
+  }
+}
+
+/* @media (max-width: 720px) {
+  .product-card {
+    flex: 0 0 calc(100% - 40px);
+  }
+
+  .carousel-arrow {
+    display: flex;
+  }
+} */
