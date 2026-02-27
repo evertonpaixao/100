@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 body {
@@ -11,8 +15,33 @@ body {
   overflow-x: hidden;
 }
 
+/* animações inicia (scroll) */
+.gsap-reveal {
+  opacity: 0;
+  y: 30;
+}
+
 p {
   font-size: 1rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #424242;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+.section-title span {
+  font-weight: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .container {
@@ -45,9 +74,9 @@ p {
 }
 
 .logo-area img {
-      max-width: 306px;
-    width: 100%;
-    filter: brightness(100);
+  max-width: 306px;
+  width: 100%;
+  filter: brightness(100);
 }
 
 .logo-icon {
@@ -80,6 +109,9 @@ p {
   justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2.2rem;
 }
 
 #nav {
@@ -151,7 +183,7 @@ p {
 }
 
 .menu-icons a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .menu-icons img {
@@ -159,10 +191,10 @@ p {
 }
 
 .menu-icons .number {
-     background: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 5px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .menu-icons a:hover img {
@@ -171,173 +203,226 @@ p {
 
 /* ===== MENU HAMBURGUER ===== */
 .hamburger-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
 }
 
 .hamburger-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    border-radius: 3px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
 }
 
 /* Animação do hamburguer quando ativo */
 .hamburger-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger-btn.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .hamburger-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* BTN */
+.btn {
+  background: #3c3a3a;
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 40, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -1px;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #524f4f;
+}
+
+.btn i {
+  font-size: 1.2rem;
+}
+
+.btn-outline {
+  background: #3c3a3a;
+  border: 2px solid #3c3a3a;
+  color: #fff;
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition */
+}
+
+.btn-absolute {
+  position: absolute;
+  right: 4%;
+  bottom: 10%;
+}
+
+/* Page */
+.page {
+  margin-top: 10rem;
 }
 
 /* Responsividade */
 @media screen and (max-width: 915px) {
-    .hamburger-btn {
-        display: block;
-    }
+  .hamburger-btn {
+    display: block;
+  }
 
-    #nav {
-        position: fixed;
-        top: 85px;
-        left: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: calc(100vh - 70px);
-        background-color: #3c3a3a;
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        transition: left 0.3s ease;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-        z-index: 98;
-        gap: 0;
-        min-width: auto;
-    }
+  #nav {
+    position: fixed;
+    top: 85px;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 70px);
+    background-color: #3c3a3a;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 98;
+    gap: 0;
+    min-width: auto;
+  }
 
-    #nav.active {
-        left: 0;
-    }
+  #nav.active {
+    left: 0;
+  }
 
-    #nav .menu-item {
-        width: 100%;
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+  #nav .menu-item {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-    #nav .menu-item:last-child {
-        border-bottom: none;
-    }
+  #nav .menu-item:last-child {
+    border-bottom: none;
+  }
 
-    /* Ajustes do submenu no mobile */
-    #nav .has-submenu .submenu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: rgba(255,255,255,0.1);
-        border: none;
-        border-radius: 8px;
-        margin-top: 10px;
-        padding: 0.5rem 0;
-        display: none;
-    }
+  /* Ajustes do submenu no mobile */
+  #nav .has-submenu .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 0.5rem 0;
+    display: none;
+  }
 
-    #nav .has-submenu.active .submenu {
-        display: block;
-    }
+  #nav .has-submenu.active .submenu {
+    display: block;
+  }
 
-    #nav .has-submenu .fa-chevron-down {
-        float: right;
-        transition: transform 0.3s;
-    }
+  #nav .has-submenu .fa-chevron-down {
+    float: right;
+    transition: transform 0.3s;
+  }
 
-    #nav .has-submenu.active .fa-chevron-down {
-        transform: rotate(180deg);
-    }
+  #nav .has-submenu.active .fa-chevron-down {
+    transform: rotate(180deg);
+  }
 
-    .submenu a {
-        color: #fff;
-        padding: 0.8rem 1.5rem;
-    }
+  .submenu a {
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+  }
 
-    .submenu a:hover {
-        background: rgba(255,255,255,0.2);
-    }
+  .submenu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-    .logo-area img {
-        max-width: 210px;
-    }
+  .logo-area img {
+    max-width: 210px;
+  }
 
-    .menu-icons {
-        width: auto;
-        min-width: auto;
-        gap: 10px;
-    }
+  .menu-icons {
+    width: auto;
+    min-width: auto;
+    gap: 10px;
+  }
 
-    /* Overlay quando menu está aberto */
-    .menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        z-index: 97;
-    }
+  /* Overlay quando menu está aberto */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 97;
+  }
 
-    .menu-overlay.active {
-        display: block;
-    }
+  .menu-overlay.active {
+    display: block;
+  }
 }
 
 /* Ajuste para telas muito pequenas */
 @media screen and (max-width: 480px) {
-    .top-bar {
-        padding: 1rem;
-    }
+  .top-bar {
+    padding: 1rem;
+  }
 
-    #nav {
-        width: 100%;
-        max-width: none;
-    }
+  #nav {
+    width: 100%;
+    max-width: none;
+  }
 
-    .logo-area img {
-        max-width: 165px;
-    }
+  .logo-area img {
+    max-width: 165px;
+  }
 
-    .menu-icons {
-        gap: 8px;
-        min-width: auto;
-    }
+  .menu-icons {
+    gap: 8px;
+    min-width: auto;
+  }
 
-    .menu-icons img {
-        width: 20px;
-    }
-    .menu-icons img.login {
-        width: 15px;
-    }
-    .menu-icons img.favorite {
-        width: 15px;
-    }
+  .menu-icons img {
+    width: 20px;
+  }
+  .menu-icons img.login {
+    width: 15px;
+  }
+  .menu-icons img.favorite {
+    width: 15px;
+  }
 }
 
 @media screen and (max-width: 370px) {
-    .logo-area img {
-        max-width: 100px;
-    }
+  .logo-area img {
+    max-width: 100px;
+  }
 }
 
 /* footer */
@@ -346,21 +431,21 @@ p {
 }
 
 #footer .container {
-    margin: 0 auto;
-    padding: 4rem 2rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 #footer .footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 #footer .section-title {
   color: #fff;
   font-weight: 400;
   font-size: 1.3rem;
-   letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 #footer .section-title span {
@@ -446,9 +531,9 @@ p {
 }
 
 #footer .container.bottom {
-    margin: 0 auto;
-    padding: 0rem 2rem;
-    padding-bottom: 2rem;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+  padding-bottom: 2rem;
 }
 
 #footer .footer-bottom {
@@ -461,6 +546,7 @@ p {
 
 #footer .footer-bottom p {
   color: #fff;
+  text-align: center;
 }
 
 #footer .footer-bottom .logo {
@@ -470,47 +556,40 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-    #footer .footer {
-      flex-wrap: wrap;
-    }
+  #footer .footer {
+    flex-wrap: wrap;
+  }
 
-    #footer .footer .footer-item {
-      flex: 1 1 100%;
-    }
+  #footer .footer .footer-item {
+    flex: 1 1 100%;
+  }
 
-    .redes {
-        margin: 0 auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        display: table;
-    }
+  .redes {
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: table;
+  }
 
-     #footer .footer .footer-item .section-title {
-      text-align: center;
-    }
+  #footer .footer .footer-item .section-title {
+    text-align: center;
+  }
 
-    #footer .footer .footer-item a {
-      text-align: center;
-    }
+  #footer .footer .footer-item a {
+    text-align: center;
+  }
 
-    #footer .footer-bottom {
-      justify-content: center;
-      gap: 20px;
-    }
-
-}
-
-/* animações inicia (scroll) */
-.gsap-reveal {
-  opacity: 0;
-  y: 30;
+  #footer .footer-bottom {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 991px) {
-    .section-title {
-      font-size: 1.6rem !important;
-    }
-    #footer .section-title {
-      font-size: 1.3rem !important;
-    }
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+  #footer .section-title {
+    font-size: 1.3rem !important;
+  }
 }

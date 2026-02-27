@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100% VOCÊ · Health & Nutrition | Produto</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <!-- <link rel="stylesheet" href="assets/styles/home.css" /> -->
+    <link rel="stylesheet" href="assets/styles/product.css" />
+    <link rel="stylesheet" href="assets/styles/product-carousel.css" />
+
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL COM SUBMENU -->
+    <header id="header" class="top-bar">
+        <div class="nav-menu">
+            <!-- Menu Hamburguer Button -->
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav" class="nav-menu-items">
+                <div class="menu-item has-submenu">
+                    Produtos <i class="fas fa-chevron-down"></i>
+                    <div class="submenu">
+                        <a href="#">Melatonina</a>
+                        <a href="#">Creatina</a>
+                        <a href="#">Energia</a>
+                        <a href="#">Pré-treino</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Quem Somos</a>
+                </div>
+            </ul>
+
+            <div class="logo-area">
+                <img src="assets/images/logo.png" alt="Logo" />
+            </div>
+
+            <div class="menu-icons">
+                <a href="#"><img class="favorite" src="assets/images/ico-coracao.png" alt="Favoritos" /></a>
+                <a href="#"><img class="cart" src="assets/images/ico-carrinho.png"
+                        alt="Carrinho" /><!-- <div class="number">1</div> --></a>
+                <a href="#"><img class="login" src="assets/images/ico-perfil.png" alt="Perfil" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- product -->
+    <section id="product" class="page">
+        <div class="product container">
+            <!-- Informações do produto -->
+            <div class="product-info">
+                <div class="product-info-content">
+                    <h1 class="product-title">Creatina 100% Você</h1>
+                    <p class="product-subtitle">CREATINA MONOHIDRATADA - 300G</p>
+
+                    <div class="price-container">
+                        <span class="current-price">R$ 89,90</span>
+                        <span class="installment-price">4 X DE R$22,48 SEM JUROS</span>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" id="decrement">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="99">
+                        <button class="quantity-btn" id="increment">+</button>
+                        <div class="box-btn-carrinho">
+                            <button class="btn btn-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btn btn-buy">Comprar Agora</button>
+                    </div>
+
+                    <div class="product-description">
+                        <p>NOSSA FÓRMULA DE CREATINA OFERECE O SUPORTE NECESSÁRIO PARA ALCANÇAR SEUS OBJETIVOS. AUXILIA
+                            NO
+                            AUMENTO DO DESEMPENHO FÍSICO DURANTE EXERCÍCIOS REPETIDOS DE CURTA DURAÇÃO E ALTA
+                            INTENSIDADE.
+                            DÊ UM IMPULSO AOS SEUS GANHOS E CONQUISTE A SUA MELHOR VERSÃO.</p>
+
+                        <div class="box-composition">
+                            <p>COMPOSIÇÃO:</p>
+                            <div class="description-composition">
+                                <p>
+                                    CREATINA MONOHIDRATADA.<br>
+                                    <b>NÃO CONTÉM GLÚTEN.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeria com carrossel -->
+            <div class="product-gallery">
+                <div class="main-image-container" id="mainImageContainer">
+                    <div class="main-image-track" id="mainImageTrack">
+                        <img data-src="assets/uploads/product/creatina-1.webp" alt="Creatina 100% Você 1"
+                            class="main-image lazy-img" loading="lazy" data-index="0">
+                        <img data-src="assets/uploads/product/creatina-2.webp" alt="Creatina 100% Você 2"
+                            class="main-image lazy-img" loading="lazy" data-index="1">
+                        <img data-src="assets/uploads/product/creatina-3.webp" alt="Creatina 100% Você 3"
+                            class="main-image lazy-img" loading="lazy" data-index="2">
+                        <img data-src="assets/uploads/product/creatina-4.webp" alt="Creatina 100% Você 4"
+                            class="main-image lazy-img" loading="lazy" data-index="3">
+                        <img data-src="assets/uploads/product/creatina-5.webp" alt="Creatina 100% Você 5"
+                            class="main-image lazy-img" loading="lazy" data-index="4">
+                    </div>
+                    <div class="carousel-indicators" id="carouselIndicators"></div>
+                </div>
+
+                <div class="thumbnail-carousel">
+                    <button class="carousel-btn prev" id="prevBtn">❮</button>
+                    <div class="thumbnails-container" id="thumbnailsContainer">
+                        <img data-src="assets/uploads/product/creatina-1.webp" alt="Thumb 1"
+                            class="lazy-img thumbnail active" data-index="0" loading="lazy">
+                        <img data-src="assets/uploads/product/creatina-2.webp" alt="Thumb 2" class="lazy-img thumbnail"
+                            data-index="1" loading="lazy">
+                        <img data-src="assets/uploads/product/creatina-3.webp" alt="Thumb 3" class="lazy-img thumbnail"
+                            data-index="2" loading="lazy">
+                        <img data-src="assets/uploads/product/creatina-4.webp" alt="Thumb 4" class="lazy-img thumbnail"
+                            data-index="3" loading="lazy">
+                        <img data-src="assets/uploads/product/creatina-5.webp" alt="Thumb 5" class="lazy-img thumbnail"
+                            data-index="4" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next" id="nextBtn">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- benefícios -->
+    <section id="beneficios">
+        <div class="beneficios container">
+            <div class="beneficio-item gsap-reveal">
+                <img data-src="assets/images/ico-frete.png" class="lazy-img" loading="lazy" alt="Frete" />
+                <div class="content">
+                    <p class="text-uppercase"><span>FRETE GRÁTIS</span><br><small>consulte regiões</small></p>
+                </div>
+            </div>
+            <div class="beneficio-item gsap-reveal">
+                <img data-src="assets/images/ico-cartao.png" class="lazy-img" loading="lazy" alt="Cartão" />
+                <div class="content">
+                    <p class="text-uppercase"><span>PARCELAMENTO</span><br><small>até 6x sem juros</small></p>
+                </div>
+            </div>
+            <div class="beneficio-item gsap-reveal">
+                <img data-src="assets/images/ico-pix.png" class="lazy-img" loading="lazy" alt="PIX" />
+                <div class="content">
+                    <p class="text-uppercase"><span>5% DESCONTO</span><br><small>no PIX ou boleto</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product - Content -->
+    <section id="product-content">
+        <div class="product-content container">
+            <div class="column col-big gsap-reveal-x-right">
+                <img data-src="assets/uploads/product-content-1.webp" alt="" class="lazy-img" loading="lazy" />
+            </div>
+            <div class="column col-small gsap-reveal-x-left">
+                <h2 class="product-title">Desenvolvida para evolução constante.</h2>
+                <p>
+                    creatina atua diretamente no sistema energético muscular, elevando seu potencial de treino dia após
+                    dia.
+                </p>
+                <h2 class="product-title">+ Desempenho</h2>
+                <p>
+                    em exercícios de alta intensidade e curta duração
+                </p>
+                <h2 class="product-title">+ Explosão</h2>
+                <p>
+                    em movimentos como musculação, tiros e sprints
+                </p>
+            </div>
+        </div>
+        <div class="product-content container reverse">
+            <div class="column col-small gsap-reveal-x-right">
+                <h2 class="product-title">Mais potência em cada passo</h2>
+                <p>
+                    A creatina apoia seu desempenho em treinos intensos e movimentos explosivos, ajudando você a extrair
+                    mais força e resistência a cada repetição.
+                </p>
+                <a href="" class="btn btn-buy">Comprar Agora</a>
+            </div>
+            <div class="column col-big gsap-reveal-x-left">
+                <img data-src="assets/uploads/product-content-2.webp" alt="" class="lazy-img" loading="lazy" />
+            </div>
+        </div>
+        <div class="product-content container">
+            <div class="column col-big gsap-reveal-x-right">
+                <img data-src="assets/uploads/product-content-3.webp" alt="" class="lazy-img" loading="lazy" />
+            </div>
+            <div class="column col-small gsap-reveal-x-left">
+                <h2 class="product-title">Recupere. Reponha. Continue.</h2>
+                <p>
+                    Uso diário, integração simples na rotina e suporte constante para manter seu corpo preparado para o
+                    próximo desafio.
+                </p>
+                <a href="" class="btn btn-buy">Comprar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- comment -->
+    <section id="comment">
+        <div class="container">
+            <h2 class="section-title gsap-reveal text-uppercase">
+                Mais de 10.000 avaliações verificadas
+                <br>
+                de <span>5 estrelas para 100% VOCÊ</span>
+            </h2>
+        </div>
+        <div class="comment container">
+            <div class="comment-item gsap-reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="content">
+                    <p>
+                        Nossa fórmula de creatina oferece o suporte necessário para alcançar seus objetivos. Auxilia no
+                        aumento do desempenho físico durante exercícios repetidos de curta duração e alta intensidade.
+                        <br><br><br>
+                        <small class="autor">JOÃO SILVA - CREATINA REVIEW</small>
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item gsap-reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="content">
+                    <p>
+                        Nossa fórmula de creatina oferece o suporte necessário para alcançar seus objetivos. Auxilia no
+                        aumento do desempenho físico durante exercícios repetidos de curta duração e alta intensidade.
+                        <br><br><br>
+                        <small class="autor">JOÃO SILVA - CREATINA REVIEW</small>
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item gsap-reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="content">
+                    <p>
+                        Nossa fórmula de creatina oferece o suporte necessário para alcançar seus objetivos. Auxilia no
+                        aumento do desempenho físico durante exercícios repetidos de curta duração e alta intensidade.
+                        <br><br><br>
+                        <small class="autor">JOÃO SILVA - CREATINA REVIEW</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARROSSEL 3 ITENS DESTAQUE (produtos) -->
+    <section class="product container">
+        <h2 class="section-title gsap-reveal text-center text-uppercase">Conheça <span>outros Produtos</span></h2>
+        <div class="carousel-wrap">
+            <button class="carousel-arrow left gsap-reveal" id="carouselLeft"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-carousel" id="productCarousel">
+                <div class="product-card gsap-reveal">
+                    <div class="price"><span class="value">20% OFF</span></div>
+                    <img class="lazy-img" loading="lazy" data-src="assets/uploads/melatonina.png" alt="" />
+                    <div class="product-content">
+                        <h3 class="text-uppercase">MELATONINA</h3>
+                        <div class="card-footer text-uppercase"><span>Sabor Maracujá - 30 Unid</span></div>
+                        <a href="" class="btn btn-product">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-card gsap-reveal">
+                    <div class="price"></div>
+                    <img class="lazy-img" loading="lazy" data-src="assets/uploads/creatina300g.png" alt="" />
+                    <div class="product-content">
+                        <h3 class="text-uppercase">Creatina</h3>
+                        <div class="card-footer text-uppercase"><span>300G</span></div>
+                        <a href="" class="btn btn-product">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-card gsap-reveal">
+                    <div class="price"></div>
+                    <img class="lazy-img" loading="lazy" data-src="assets/uploads/choco-energy-380-vanilla.png"
+                        alt="" />
+                    <div class="product-content">
+                        <h3 class="text-uppercase">Choco Energy</h3>
+                        <div class="card-footer text-uppercase"><span>Sabor Vanilla Latte - 380GR</span></div>
+                        <a href="" class="btn btn-product">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-card gsap-reveal">
+                    <div class="price"></div>
+                    <img class="lazy-img" loading="lazy" data-src="assets/uploads/meia.webp" alt="" />
+                    <div class="product-content">
+                        <h3 class="text-uppercase">Meia</h3>
+                        <div class="card-footer text-uppercase"><span>100% VOCÊ</span></div>
+                        <a href="" class="btn btn-product">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-arrow right gsap-reveal" id="carouselRight"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer container">
+            <div class="footer-item">
+                <h2 class="section-title">Receba nossas ofertas por e-mail</h2>
+                <div class="newsletter">
+                    <form id="form-news">
+                        <input type="email" placeholder="Digite seu e-mail" required />
+                        <input type="submit" class="btn btn-outline" value="Inscrever-se" />
+                    </form>
+                </div>
+                <div class="redes">
+                    <h2 class="section-title"><small>Siga nossas Redes Sociais</small></h2>
+                    <div class="icons">
+                        <a href="#"><img data-src="assets/images/ico-instagram.png" class="lazy-img" loading="lazy"
+                                alt="Instagram" /></a>
+                        <a href="#"><img data-src="assets/images/ico-facebook.png" class="lazy-img" loading="lazy"
+                                alt="Facebook" /></a>
+                        <a href="#"><img data-src="assets/images/ico-tiktok.png" class="lazy-img" loading="lazy"
+                                alt="TikTok" /></a>
+                        <a href="#"><img data-src="assets/images/ico-x.png" class="lazy-img" loading="lazy"
+                                alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Sobre</span></h2>
+                <a href="">Sobre Nós</a>
+                <a href="">Como Comprar</a>
+                <a href="">Termos e Condições</a>
+                <a href="">Política de Privacidade</a>
+                <a href="">Política de Trocas e Devoluções</a>
+                <a href="">Minha Conta</a>
+                <a href="">Acompanhe seu Pedido</a>
+                <a href="">Cards Colecionáveis</a>
+                <a href="">FAQ</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Empresa</span></h2>
+                <a href="">Nossa Equipe</a>
+                <a href="">Nossas Vagas / Carreiras</a>
+                <a href="">Nosso Propósito</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Suporte</span></h2>
+                <a href="">Entre em Contato</a>
+                <a href="">Chat Online</a>
+                <a href="">Política de Privacidade</a>
+            </div>
+        </div>
+        <div class="footer container bottom">
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 100% VOCÊ. Todos os direitos reservados.</p>
+                <img data-src="assets/images/logo.png" alt="Logo 100% VOCÊ" class="logo lazy-img" loading="lazy" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger - Geral -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/libs/lenis/lenis.min.js"></script>
+    <script src="assets/scripts/gsap-scrolltrigger-lenis.js"></script>
+    <script src="assets/scripts/lazy.js"></script>
+
+    <!-- Scripts - Home -->
+    <script src="assets/scripts/menu-responsivo.js"></script>
+    <script src="assets/scripts/product.js"></script>
+    <script src="assets/scripts/product-carousel.js"></script>
+    <script src="assets/scripts/gsap-scrolltrigger-lenis-x-left-right.js"></script>
+
+
+</body>
+
+</html>

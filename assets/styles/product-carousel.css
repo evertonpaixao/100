@@ -1,3 +1,8 @@
+.product {
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
 .carousel-wrap {
   position: relative;
 }
@@ -73,7 +78,9 @@
   box-shadow: none;
   margin-top: 1.25rem;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition */
 }
 
 .product-card .btn-product:hover {
@@ -139,7 +146,9 @@
   width: 100%;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.5s ease, transform 1s ease;
+  transition:
+    opacity 1.5s ease,
+    transform 1s ease;
 }
 
 .product-card:hover h3 {
@@ -153,7 +162,9 @@
   color: #fff;
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 2s ease, transform 1.5s ease;
+  transition:
+    opacity 2s ease,
+    transform 1.5s ease;
 }
 
 .product-card:hover .card-footer {
@@ -198,7 +209,9 @@
   z-index: 5;
   font-weight: bold;
   box-shadow: 0 6px 14px rgba(0, 30, 0, 0.1);
-  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease; /* Smooth transition */
 }
 
 .carousel-arrow:hover {
@@ -215,9 +228,9 @@
 }
 
 @media screen and (max-width: 991px) {
-    .product-card .product-content h3 {
-        font-size: 1.5rem;
-    }
+  .product-card .product-content h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 960px) {
