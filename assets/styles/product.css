@@ -1,11 +1,11 @@
 .gsap-reveal-x-right {
   opacity: 0;
-  x: -260;
+  x: -20;
 }
 
 .gsap-reveal-x-left {
   opacity: 0;
-  x: 260;
+  x: 20;
 }
 
 #product .product {

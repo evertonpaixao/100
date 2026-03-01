@@ -289,6 +289,14 @@ p {
 
 /* Responsividade */
 @media screen and (max-width: 915px) {
+  .top-bar {
+    padding: 1rem 1rem;
+  }
+
+  .nav-menu {
+    padding: 0;
+  }
+
   .hamburger-btn {
     display: block;
   }

@@ -26,8 +26,8 @@
             // Estado inicial
             gsap.set(el, {
                 opacity: 0,
-                x: 260,
-                scale: 0.95
+                x: 20,
+                scale: 1
             });
 
             // Animação com delay baseado no índice
@@ -49,8 +49,8 @@
                 onLeaveBack: () => {
                     gsap.to(el, {
                         opacity: 0,
-                        x: 260,
-                        scale: 0.95,
+                        x: 20,
+                        scale: 1,
                         duration: 0.8,
                         ease: 'power2.out',
                         overwrite: true
@@ -66,8 +66,8 @@
             // Estado inicial
             gsap.set(el, {
                 opacity: 0,
-                x: -260,
-                scale: 0.95
+                x: -20,
+                scale: 1
             });
 
             // Animação com delay baseado no índice
@@ -89,8 +89,8 @@
                 onLeaveBack: () => {
                     gsap.to(el, {
                         opacity: 0,
-                        x: -260,
-                        scale: 0.95,
+                        x: -20,
+                        scale: 1,
                         duration: 0.8,
                         ease: 'power2.out',
                         overwrite: true
