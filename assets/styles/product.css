@@ -366,6 +366,15 @@ button#increment {
 
 /* Responsividade */
 @media (max-width: 991px) {
+  .product {
+      margin: 0;
+  }
+  .product-info {
+      padding-bottom: 0;
+  }
+  .product-subtitle {
+      margin: 0;
+  }
   #product .product-mobile {
     display: block;
     margin-bottom: 0;
@@ -409,9 +418,9 @@ button#increment {
     min-width: 100%;
   }
 
-  .main-image-container {
+ /*  .main-image-container {
     max-height: 400px;
-  }
+  } */
 
   .carousel-btn {
     width: 30px;
