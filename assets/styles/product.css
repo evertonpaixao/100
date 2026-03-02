@@ -14,6 +14,10 @@
   gap: 30px;
 }
 
+#product .product-mobile {
+  display: none;
+}
+
 /* Informações do produto */
 .product-info {
   flex: 1;
@@ -362,8 +366,14 @@ button#increment {
 
 /* Responsividade */
 @media (max-width: 991px) {
+  #product .product-mobile {
+    display: block;
+  }
+  #product .product-pc {
+    display: none;
+  }
   #product .product {
-    flex-flow: column;
+    flex-flow: column-reverse;
   }
   .product-info-content {
     max-width: inherit;
