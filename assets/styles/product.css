@@ -368,13 +368,18 @@ button#increment {
 @media (max-width: 991px) {
   #product .product-mobile {
     display: block;
+    margin-bottom: 0;
   }
   #product .product-pc {
     display: none;
   }
   #product .product {
     flex-flow: column-reverse;
+    gap: 0;
   }
+  .price-container {
+    margin: 0;
+}
   .product-info-content {
     max-width: inherit;
   }
