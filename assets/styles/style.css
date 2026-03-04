@@ -394,6 +394,11 @@ p {
   .menu-overlay.active {
     display: block;
   }
+
+  .page {
+  margin-top: 10rem;
+}
+
 }
 
 /* Ajuste para telas muito pequenas */
@@ -425,6 +430,10 @@ p {
   .menu-icons img.favorite {
     width: 15px;
   }
+
+  .page {
+  margin-top: 10rem;
+}
 }
 
 @media screen and (max-width: 370px) {

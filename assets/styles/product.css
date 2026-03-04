@@ -367,7 +367,7 @@ button#increment {
 /* Responsividade */
 @media (max-width: 991px) {
   .product {
-      margin: 0;
+      margin: 0 !important;
   }
   .product-info {
       padding-bottom: 0;
