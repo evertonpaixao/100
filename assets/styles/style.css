@@ -40,6 +40,10 @@ p {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -396,9 +400,8 @@ p {
   }
 
   .page {
-  margin-top: 10rem;
-}
-
+    margin-top: 10rem;
+  }
 }
 
 /* Ajuste para telas muito pequenas */
@@ -432,8 +435,8 @@ p {
   }
 
   .page {
-  margin-top: 10rem;
-}
+    margin-top: 10rem;
+  }
 }
 
 @media screen and (max-width: 370px) {
