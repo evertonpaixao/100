@@ -627,6 +627,20 @@
     height: 45px !important;
     width: 27%;
   }
+  .product.cart.banner.resumo .resumo .content-description .item,
+  .product.cart.banner.resumo .resumo .content-total .item {
+    flex-flow: column;
+  }
+  .product.cart.banner.resumo .resumo .content-total .item {
+    align-items: center;
+  }
+  .product.cart .text-preco-final {
+    text-align: center;
+  }
+  .product.cart .btn-product.btn-finalizar {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 382px) {
