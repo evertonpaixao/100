@@ -1,0 +1,93 @@
+.faq {
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.faq-title {
+  font-size: 3.6rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.faq .row {
+  display: flex;
+  gap: 7%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.faq .row.center {
+  align-items: center;
+}
+
+.faq .row .column {
+  flex-wrap: wrap;
+}
+
+/* Acordeon */
+.acordeon-item .box-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.acordeon-item h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.acordeon-item h3 i {
+  margin-top: 3px;
+  color: #ddd;
+}
+
+.acordeon-item .box-title .number {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #dcdcdc;
+}
+
+.acordeon-item .content {
+  margin-bottom: 1rem;
+  margin-left: 75px;
+  padding-right: 75px;
+  height: 0;
+  transition: height 0.4s ease;
+  overflow: hidden;
+}
+
+.acordeon-item.active .box-title {
+  border: 1px solid #fff;
+}
+
+.acordeon-item.active .box-title .number {
+  color: #424242;
+}
+
+.acordeon-item.active .box-title i {
+  margin-top: 3px;
+  color: #ddd;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767px) {
+  .acordeon-item h3 {
+    font-size: 1.3rem !important;
+  }
+}

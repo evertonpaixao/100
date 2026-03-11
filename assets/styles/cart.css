@@ -519,6 +519,27 @@
   margin-top: 20px;
 }
 
+.carrinho-vazio a {
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  left: 0;
+  width: 100%;
+  max-width: 250px;
+  padding: 20px 40px;
+  justify-content: center;
+  font-weight: 400;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.carrinho-vazio a:hover {
+  background-color: #6c757d;
+}
+
 .carrinho-vazio p {
   font-size: 18px;
   color: #666;
