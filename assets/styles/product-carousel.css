@@ -138,9 +138,10 @@
 .product-card .product-content h3 {
   color: #fff;
   font-size: 2rem;
-  line-height: 1.7;
+  line-height: 1.2;
   font-weight: 400;
   margin: 0.5rem 0 0rem;
+  padding-bottom: 10px;
   text-align: center;
   border-bottom: 1px solid #fff;
   width: 100%;

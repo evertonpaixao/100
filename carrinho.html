@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100% VOCÊ · Health & Nutrition | Carrinho de compras</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/product-carousel.css" />
+    <link rel="stylesheet" href="assets/styles/cart.css" />
+
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL COM SUBMENU -->
+    <header id="header" class="top-bar">
+        <div class="nav-menu">
+            <!-- Menu Hamburguer Button -->
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav" class="nav-menu-items">
+                <div class="menu-item has-submenu">
+                    Produtos <i class="fas fa-chevron-down"></i>
+                    <div class="submenu">
+                        <a href="#">Melatonina</a>
+                        <a href="#">Creatina</a>
+                        <a href="#">Energia</a>
+                        <a href="#">Pré-treino</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Quem Somos</a>
+                </div>
+            </ul>
+
+            <div class="logo-area">
+                <img src="assets/images/logo.png" alt="Logo" />
+            </div>
+
+            <div class="menu-icons">
+                <a href="#"><img class="favorite" src="assets/images/ico-coracao.png" alt="Favoritos" /></a>
+                <a href="#"><img class="cart" src="assets/images/ico-carrinho.png"
+                        alt="Carrinho" /><!-- <div class="number">1</div> --></a>
+                <a href="#"><img class="login" src="assets/images/ico-perfil.png" alt="Perfil" /></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+
+        <section class="product cart-intro container">
+            <h1 class="carrinho-title">Carrinho</h1>
+            <p class="text-carrinho text-uppercase">Clique em finalizar compra para efetuar o seu pedido.</p>
+            <h2 class="carrinho-subtitle">Ganhe 20% de Desconto na Inscrição para a Corrida 100% Você em compras acima
+                de R$ 200,00</h2>
+            <img class="banner-full" src="assets/uploads/banner-bell.png" alt="" />
+        </section>
+
+        <form id="form-carrinho" method="get" action="">
+
+            <!-- Modal de confirmação -->
+            <div id="modal-confirmacao" class="modal">
+                <div class="modal-content">
+                    <p>Deseja realmente excluir o produto?</p>
+                    <div class="modal-buttons">
+                        <button type="button" id="btn-sim" class="btn-sim">Sim</button>
+                        <button type="button" id="btn-nao" class="btn-nao">Não</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="product cart-list container" id="carrinho-container">
+                <div class="header">
+                    <div class="foto-nome">Produto</div>
+                    <div class="quantidade-header text-center">Quantidade</div>
+                    <div class="preco text-center">Preço</div>
+                    <div class="excluir text-center"><small>Excluir</small></div>
+                </div>
+
+                <!-- Mensagem de carrinho vazio (inicialmente oculta) -->
+                <div id="carrinho-vazio" class="carrinho-vazio hidden">
+                    <p>O carrinho de compras está vazio</p>
+                </div>
+
+                <div class="content-produto gsap-reveal" data-produto-id="1">
+                    <div class="foto-nome">
+                        <img class="lazy-img foto" loading="lazy" data-src="assets/uploads/creatina300g.png" alt="">
+                        <div class="nome-produto">
+                            <h2 class="carrinho-subtitle">Creatina 100% Você - 300 G</h2>
+                            <p class="carrinho-text text-uppercase">Creatina Monohidratada</p>
+                        </div>
+                    </div>
+                    <div class="quantidade-produto">
+                        <button type="button" class="quantity-btn decrement">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                        <button type="button" class="quantity-btn increment">+</button>
+                    </div>
+                    <div class="preco">R$ 89,90</div>
+                    <div class="excluir bg">
+                        <button class="btn-excluir" type="button">
+                            <img src="assets/images/icon-lixeira.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="content-produto gsap-reveal" data-produto-id="2">
+                    <div class="foto-nome">
+                        <img class="lazy-img foto" loading="lazy" data-src="assets/uploads/melatonina.png" alt="">
+                        <div class="nome-produto">
+                            <h2 class="carrinho-subtitle">Melatonina - 30 Und</h2>
+                            <p class="text-uppercase">Sabor Maracujá</p>
+                        </div>
+                    </div>
+                    <div class="quantidade-produto">
+                        <button type="button" class="quantity-btn decrement">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                        <button type="button" class="quantity-btn increment">+</button>
+                    </div>
+                    <div class="preco">R$ 89,90</div>
+                    <div class="excluir bg">
+                        <button class="btn-excluir" type="button">
+                            <img src="assets/images/icon-lixeira.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="content-produto gsap-reveal" data-produto-id="3">
+                    <div class="foto-nome">
+                        <img class="lazy-img foto" loading="lazy" data-src="assets/uploads/meia.webp" alt="">
+                        <div class="nome-produto">
+                            <h2 class="carrinho-subtitle">Meia 100% Você</h2>
+                            <p class="text-uppercase">par de meia</p>
+                        </div>
+                    </div>
+                    <div class="quantidade-produto">
+                        <button type="button" class="quantity-btn decrement">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                        <button type="button" class="quantity-btn increment">+</button>
+                    </div>
+                    <div class="preco">R$ 89,90</div>
+                    <div class="excluir bg">
+                        <button class="btn-excluir" type="button">
+                            <img src="assets/images/icon-lixeira.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="content-produto gsap-reveal" data-produto-id="4">
+                    <div class=" foto-nome">
+                        <img class="lazy-img foto" loading="lazy" data-src="assets/uploads/choco-energy-380-vanilla.png"
+                            alt="">
+                        <div class="nome-produto">
+                            <h2 class="carrinho-subtitle">Choco Energy - 380 G</h2>
+                            <p class="text-uppercase">sabor vanilla latte</p>
+                        </div>
+                    </div>
+                    <div class="quantidade-produto">
+                        <button type="button" class="quantity-btn decrement">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                        <button type="button" class="quantity-btn increment">+</button>
+                    </div>
+                    <div class="preco">R$ 89,90</div>
+                    <div class="excluir bg">
+                        <button class="btn-excluir" type="button">
+                            <img src="assets/images/icon-lixeira.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="product-cart-frete-subtotal" class="product cart frete subtotal container gsap-reveal">
+                <div class="frete">
+                    <h2 class="section-title"><small>Calcular Frete:</small></h2>
+                    <div class="box-frete-input">
+                        <input class="input-frete" type="text" name="frete" maxlength="9" placeholder="00000-000">
+                        <button class="button-frete" type="button">˃</button>
+                    </div>
+                    <p class="mensagem-frete"></p>
+                    <p class="mensagem"></p>
+                    <a class="text-uppercase link-frete" href="http://www.buscacep.correios.com.br/sistemas/buscacep/"
+                        target="_blank">? Não sei meu cep</a>
+                    <div class="box-frete-cep">
+                        <p class="cep-exibido">Entregas para o CEP: <b class="cep-negrito">40300-550</b></p>
+                        <button class="button-frete-alterar" type="button">Alterar CEP</button>
+                    </div>
+                    <div class="content-frete">
+                        <h3><small>Prazo de entrega válidos em dias úteis</small></h3>
+                        <br>
+                        <p>Envio da domicílio</p>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="options-frete">
+                            <div class="item">
+                                <input type="radio" id="pac" name="frete" value="PAC">
+                                <label for="pac">Correios - PAC<br><small>Chega quinta 19/03</label></small>
+                                <p>R$ 22,70</p>
+                            </div>
+                            <div class="item">
+                                <input type="radio" id="sedex" name="frete" value="SEDEX">
+                                <label for="sedex">Correios - SEDEX<br><small>Chega quinta 13/03</label></small>
+                                <p>R$ 52,70</p>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <p>O prazo de entrega <b>não contabiliza feriados.</b></p>
+                    </div>
+                </div>
+                <div class="subtotal gsap-reveal">
+                    <h2 class="section-title text-right"><big>Subtotal: R$ 544,60</big></h2>
+                    <h3 class="section-title text-right"><small>Adicionar cupom de desconto</small></h3>
+                    <div class="box-cupom-input">
+                        <input class="input-cupom" type="text" name="cupom">
+                        <button class="button-cupom" type="button">˃</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CARROSSEL 3 ITENS DESTAQUE (produtos) -->
+            <section id="product-cart-carousel" class="product cart container">
+                <div class="content-full">
+                    <div class="progressive">
+                        <div class="content">
+                            <h2 class="section-title gsap-reveal">Falta pouco para você garantir Frete Grátis</h2>
+                            <div class="barra" style="--progress:70%;"></div>
+                            <h2 class="section-title gsap-reveal"><small>Faltam apenas <span>R$ 32,90</span></small>
+                            </h2>
+                            <p class="gsap-reveal text-uppercase"><small>adicione mais itens no seu carrinho e garanta
+                                    frete
+                                    grátis</small></p>
+                        </div>
+                    </div>
+                    <div class="carousel-wrap">
+                        <button style="visibility: hidden;" class="carousel-arrow left gsap-reveal" id="carouselLeft"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <div class="product-carousel" id="productCarousel">
+                            <div class="product-card gsap-reveal">
+                                <div class="price"><span class="value">20% OFF</span></div>
+                                <img class="lazy-img" loading="lazy" data-src="assets/uploads/melatonina.png" alt="" />
+                                <div class="product-content">
+                                    <h3 class="text-uppercase">MELATONINA</h3>
+                                    <div class="card-footer text-uppercase"><span>Sabor Maracujá - 30 Unid</span></div>
+                                </div>
+                                <input class="btn btn-product btn-carrinho" type="submit" value="Adicionar ao carrinho">
+                            </div>
+                            <div class="product-card gsap-reveal">
+                                <div class="price"></div>
+                                <img class="lazy-img" loading="lazy" data-src="assets/uploads/creatina300g.png"
+                                    alt="" />
+                                <div class="product-content">
+                                    <h3 class="text-uppercase">Creatina</h3>
+                                    <div class="card-footer text-uppercase"><span>300G</span></div>
+                                </div>
+                                <a href="" class="btn btn-product btn-carrinho">Adicionar ao carrinho</a>
+                            </div>
+                            <div class="product-card gsap-reveal">
+                                <div class="price"></div>
+                                <img class="lazy-img" loading="lazy"
+                                    data-src="assets/uploads/choco-energy-380-vanilla.png" alt="" />
+                                <div class="product-content">
+                                    <h3 class="text-uppercase">Choco Energy</h3>
+                                    <div class="card-footer text-uppercase"><span>Sabor Vanilla Latte - 380GR</span>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-product btn-carrinho">Adicionar ao carrinho</a>
+                            </div>
+                            <div class="product-card gsap-reveal">
+                                <div class="price"></div>
+                                <img class="lazy-img" loading="lazy" data-src="assets/uploads/meia.webp" alt="" />
+                                <div class="product-content">
+                                    <h3 class="text-uppercase">Meia</h3>
+                                    <div class="card-footer text-uppercase"><span>100% VOCÊ</span></div>
+                                </div>
+                                <a href="" class="btn btn-product btn-carrinho">Adicionar ao carrinho</a>
+                            </div>
+                        </div>
+                        <button style="visibility: hidden;" class="carousel-arrow right gsap-reveal"
+                            id="carouselRight"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="product-cart-banner-resumo" class="product cart banner resumo container">
+                <div class="banner gsap-reveal">
+                    <img src="assets/uploads/banner-retangular-bell.png" alt="" />
+                </div>
+                <div class="resumo gsap-reveal">
+                    <h2 class="section-title">Resumo da Compra</h2>
+                    <div class="content-description">
+                        <div class="item">
+                            <p>Valor dos Produtos</p>
+                            <p class="text-right">R$ 544,60</p>
+                        </div>
+                        <div class="item">
+                            <p>Desconto Progressivo</p>
+                            <p class="text-right">R$ 24,60</p>
+                        </div>
+                        <div class="item">
+                            <p>Valor do Frete</p>
+                            <p class="text-right">R$ 34,90</p>
+                        </div>
+                    </div>
+                    <div class="content-total">
+                        <div class="item">
+                            <p><big>Total</big></p>
+                            <p class="text-right text-preco-final"><big>R$ 554,90</big><br><small
+                                    class="text-uppercase">ou <b>4x de R$
+                                        138,70</b> sem juros</small></p>
+                        </div>
+                        <div class="item">
+                            <input class="btn btn-product btn-carrinho btn-finalizar" type="submit"
+                                value="FINALIZAR COMPRA">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer container">
+            <div class="footer-item">
+                <h2 class="section-title">Receba nossas ofertas por e-mail</h2>
+                <div class="newsletter">
+                    <form id="form-news">
+                        <input type="email" placeholder="Digite seu e-mail" required />
+                        <input type="submit" class="btn btn-outline" value="Inscrever-se" />
+                    </form>
+                </div>
+                <div class="redes">
+                    <h2 class="section-title"><small>Siga nossas Redes Sociais</small></h2>
+                    <div class="icons">
+                        <a href="#"><img data-src="assets/images/ico-instagram.png" class="lazy-img" loading="lazy"
+                                alt="Instagram" /></a>
+                        <a href="#"><img data-src="assets/images/ico-facebook.png" class="lazy-img" loading="lazy"
+                                alt="Facebook" /></a>
+                        <a href="#"><img data-src="assets/images/ico-tiktok.png" class="lazy-img" loading="lazy"
+                                alt="TikTok" /></a>
+                        <a href="#"><img data-src="assets/images/ico-x.png" class="lazy-img" loading="lazy"
+                                alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Sobre</span></h2>
+                <a href="">Sobre Nós</a>
+                <a href="">Como Comprar</a>
+                <a href="">Termos e Condições</a>
+                <a href="">Política de Privacidade</a>
+                <a href="">Política de Trocas e Devoluções</a>
+                <a href="">Minha Conta</a>
+                <a href="">Acompanhe seu Pedido</a>
+                <a href="">Cards Colecionáveis</a>
+                <a href="">FAQ</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Empresa</span></h2>
+                <a href="">Nossa Equipe</a>
+                <a href="">Nossas Vagas / Carreiras</a>
+                <a href="">Nosso Propósito</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Suporte</span></h2>
+                <a href="">Entre em Contato</a>
+                <a href="">Chat Online</a>
+                <a href="">Política de Privacidade</a>
+            </div>
+        </div>
+        <div class="footer container bottom">
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 100% VOCÊ. Todos os direitos reservados.</p>
+                <img data-src="assets/images/logo.png" alt="Logo 100% VOCÊ" class="logo lazy-img" loading="lazy" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger - Geral -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/libs/lenis/lenis.min.js"></script>
+    <script src="assets/scripts/gsap-scrolltrigger-lenis.js"></script>
+    <script src="assets/scripts/lazy.js"></script>
+    <script src="assets/scripts/menu-responsivo.js"></script>
+
+    <!-- Scripts - Home -->
+    <script src="assets/scripts/product-carousel.js"></script>
+    <script src="assets/scripts/cart.js"></script>
+
+
+</body>
+
+</html>
