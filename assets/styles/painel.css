@@ -20,3 +20,56 @@
   margin: 0 auto;
   flex-direction: column;
 }
+
+.painel .row.header .flex {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.painel .row.header .flex .text-bemvindo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.painel .row .flex {
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.painel .row .flex .column .content {
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.painel .row .flex .column .content ul li {
+  font-size: 2rem;
+  font-weight: 500;
+  list-style: none;
+}
+
+.painel .row .flex .column .content ul li img {
+  margin-right: 20px;
+}
+
+.painel .row .flex .column .content hr {
+  border: 1px solid #dcdcdc;
+}
+
+.painel .row .flex .column .card .content {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.painel .row .flex .column .card .content .name-card {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.painel .row .flex .column .card .content .number-card {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
