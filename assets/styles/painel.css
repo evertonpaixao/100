@@ -12,18 +12,30 @@
   line-height: 1;
 }
 
+.painel-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 15px 0;
+  width: 100%;
+}
+
 .painel .row {
   display: flex;
-  gap: 7%;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 40px;
   flex-direction: column;
 }
 
 .painel .row.header .flex {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -33,43 +45,88 @@
 }
 
 .painel .row .flex {
+  display: flex;
   gap: 20px;
   align-items: flex-start;
 }
 
-.painel .row .flex .column .content {
+.painel .row .flex .column.right {
+  width: 30%;
+  margin-bottom: 50px;
+}
+
+.painel .row .flex .column.left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.painel .row .flex .column .menu {
   border: 1px solid #dcdcdc;
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
 }
 
-.painel .row .flex .column .content ul li {
-  font-size: 2rem;
-  font-weight: 500;
+.painel .row .flex .column .menu ul {
   list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.painel .row .flex .column .content ul li img {
-  margin-right: 20px;
-}
-
-.painel .row .flex .column .content hr {
-  border: 1px solid #dcdcdc;
-}
-
-.painel .row .flex .column .card .content {
+.painel .row .flex .column .menu ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
   width: 100%;
-  margin-bottom: 10px;
+  padding: 5px 10px;
 }
 
-.painel .row .flex .column .card .content .name-card {
-  font-size: 1.5rem;
-  font-weight: 500;
+.painel .row .flex .column .menu ul li:hover img {
+  filter: contrast(1);
 }
 
-.painel .row .flex .column .card .content .number-card {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-transform: uppercase;
+.painel .row .flex .column .menu ul li.active {
+  border: 1px solid #dcdcdc;
+  background-color: #f2f2f2;
+}
+
+.painel .row .flex .column .menu ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.painel .row .flex .column .menu ul li img {
+  margin-right: 18px;
+  max-width: 22px;
+  height: auto;
+  filter: contrast(0.4);
+}
+
+@media screen and (max-width: 991px) {
+  .painel .row.header .flex .text-bemvindo {
+    font-size: 1.5rem;
+  }
+  .painel-title {
+    font-size: 2.5rem;
+  }
+  .painel .row .flex .column .menu ul li {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .painel .row .flex {
+    flex-direction: column;
+  }
+
+  .painel .row .flex .column.right,
+  .painel .row .flex .column.left {
+    width: 100%;
+  }
 }

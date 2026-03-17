@@ -1,0 +1,356 @@
+.painel .row .flex .column .card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.painel .row .flex .column .card .item {
+  width: 100%;
+}
+
+.painel .row .flex .column .card .action {
+  cursor: pointer;
+}
+
+/* .painel .row .flex .column .card .action::after {
+  content: "⋮";
+  font-size: 48px;
+  cursor: pointer;
+  color: #dcdcdc;
+} */
+
+.painel .row .flex .column .card .item .name-card {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.painel .row .flex .column .card .item .number-card {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.painel .row .flex .column .add-card {
+  background-color: #f2f2f2;
+  padding: 10px 30px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  max-width: 250px;
+}
+
+.painel .row .flex .column .add-card:hover {
+  background-color: #dcdcdc;
+}
+
+#form-cadastro-cartao input {
+  border: none;
+  background-color: #f2f2f2;
+  border: 1px solid #dcdcdc;
+  font-size: 1rem;
+  color: #7d7975;
+  width: 100%;
+  padding: 15px 15px 15px 20px;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  margin: 10px 0;
+  display: block;
+}
+
+#form-cadastro-cartao input[type="submit"] {
+  background-color: #f2f2f2;
+  padding: 10px 30px;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  max-width: 150px;
+  color: #000;
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+}
+
+#form-cadastro-cartao input[type="submit"]:hover {
+  background-color: #dcdcdc;
+}
+
+#cards,
+#card-form {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+#cards {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+#cards.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none; /* Impede cliques no elemento invisível */
+  height: 0;
+}
+
+#card-form {
+  opacity: 0;
+  transform: translateX(20px);
+  pointer-events: none;
+}
+
+#card-form.visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cartao-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cartao-input,
+.validade-input,
+.cvv-input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.cartao-input {
+  padding-right: 50px; /* Espaço para a bandeira */
+}
+
+.cartao-input:focus,
+.validade-input:focus,
+.cvv-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.cartao-input.error,
+.validade-input.error,
+.cvv-input.error {
+  border-color: #f44336;
+}
+
+.bandeira-container {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bandeira-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bandeira-img.visible {
+  opacity: 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: -7px;
+  min-height: 18px;
+  position: absolute;
+  margin-left: 21px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  max-width: 150px;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #da190b;
+}
+
+.cancel-btn:disabled,
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.modal-icon.error {
+  color: #f44336;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-message {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #45a049;
+}
+
+.modal-button.cancel {
+  background-color: #da190b;
+}
+
+.modal-button.error {
+  background-color: #f44336;
+}
+
+.modal-button.error:hover {
+  background-color: #da190b;
+}
+
+@media screen and (max-width: 991px) {
+  .painel .row .flex .column .card .item .name-card {
+    font-size: 1.1rem;
+  }
+  .painel .row .flex .column .card .item .number-card {
+    font-size: 0.75rem;
+  }
+  .painel .row .flex .column .add-card {
+    font-size: 0.9rem;
+  }
+  #form-cadastro-cartao input[type="submit"],
+  .cancel-btn {
+    font-size: 0.9rem;
+  }
+  .cancel-btn {
+    padding: 10px 30px;
+  }
+}

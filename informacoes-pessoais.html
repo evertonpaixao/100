@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100% VOCÊ · Health & Nutrition | Informações Pessoal</title>
+    <title>100% VOCÊ · Health & Nutrition | Informações Pessoais</title>
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/painel.css" />
+    <link rel="stylesheet" href="assets/styles/informacoes-pessoais.css" />
 
 </head>
 
@@ -59,6 +60,40 @@
         </div>
     </header>
 
+    <!-- Modal de confirmação de exclusão -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-icon warning">⚠️</div>
+            <h3 class="modal-title">Confirmar Exclusão</h3>
+            <p class="modal-message">Tem certeza que deseja excluir este endereço?</p>
+            <div class="modal-buttons">
+                <button class="modal-button confirm" id="confirm-yes">Sim</button>
+                <button class="modal-button cancel" id="confirm-no">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de sucesso -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Edição salvo com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal de erro (opcional) -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon error">❌</div>
+            <h3 class="modal-title">Erro!</h3>
+            <p class="modal-message" id="error-message">Por favor, corrija os erros no formulário
+            </p>
+            <button class="modal-button error" id="modal-error-ok-btn">OK</button>
+        </div>
+    </div>
+
     <!-- painel -->
     <section id="painel" class="page">
         <div class="painel container">
@@ -79,34 +114,175 @@
             </div>
             <div class="row">
                 <div class="flex gsap-reveal">
-                    <div class="column.right">
-                        <div class="content">
+                    <div class="column right">
+                        <div class="menu">
                             <ul>
-                                <li><img src="assets/images/icon-pedido.png" alt="" /> Meus Pedidos</li>
-                                <li><img src="assets/images/icon-favorito.png" alt="" /> Favoritos</li>
-                                <li><img src="assets/images/icon-pessoal.png" alt="" /> Informações Pessoais</li>
-                                <li class="active"><img src="assets/images/icon-pagamento.png" alt="" /> Forma de
-                                    Pagamento</li>
+                                <li><a href="meus-pedidos.html"><img src="assets/images/icon-pedido.png" alt="" /> Meus
+                                        Pedidos</a></li>
+                                <li><a href="favoritos.html"><img src="assets/images/icon-favorito.png" alt="" />
+                                        Favoritos</a></li>
+                                <li class="active"><a href="informacoes-pessoais.html"><img
+                                            src="assets/images/icon-pessoal.png" alt="" /> Informações Pessoais</a></li>
+                                <li><a href="formas-de-pagamento.html"><img src="assets/images/icon-pagamento.png"
+                                            alt="" /> Formas de
+                                        Pagamento</a></li>
                                 <hr>
-                                <li><img src="assets/images/icon-cliente.png" alt="" /> Suporte ao Cliente</li>
-                                <li><img src="assets/images/icon-sair.png" alt="" /> Sair</li>
+                                <li><a href="suporte-ao-cliente.html"><img src="assets/images/icon-cliente.png"
+                                            alt="" /> Suporte ao Cliente</a></li>
+                                <li class="link-sair"><a href=""><img src="assets/images/icon-sair.png" alt="" />
+                                        Sair</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="column.left">
-                        <div class="card">
-                            <div class="content">
-                                <p class="name-card">Cartão Amex <span>(Principal)</span></p>
-                                <p class="number-card">Final 0009</p>
-                            </div>
-                            <div class="action"></div>
+                    <div class="column left">
+
+                        <div id="cadastro-form">
+                            <form id="form-cadastro-pessoais" class="form-dados-pessoais" action="">
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label for="nome">Nome</label>
+                                        <input id="nome" type="text" name="nome" value="Sérgio" required disabled>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label for="sobrenome">Sobrenome</label>
+                                        <input id="sobrenome" type="text" name="sobrenome" value="Gomes" required
+                                            disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label for="telefone">Telefone</label>
+                                        <input id="telefone" type="text" name="telefone"
+                                            pattern="\(\d{2}\)\s\d{4,5}-\d{4}" maxlength="15" value="(71) 98858-5599"
+                                            required disabled>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" name="email"
+                                            value="sergiogomes@cemporcentovoce.com.br" required disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="data">Data de Nascimento</label>
+                                        <input id="data" type="text" name="data" value="11/12/1980"
+                                            pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}" maxlength="10"
+                                            required disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cpf">CPF</label>
+                                        <input id="cpf" type="text" name="cpf" value="250.250.989-88"
+                                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rg">RG (Opcional)</label>
+                                        <input id="rg" type="text" name="rg" value="595955550001" required disabled>
+                                    </div>
+                                </div>
+                                <button class="btn-editar" id="btn-editar" type="button">Editar</button>
+                                <input class="btn-salvar" id="btn-salvar" type="submit" value="Salvar" />
+                            </form>
                         </div>
-                        <div class="card">
-                            <div class="content">
-                                <p class="name-card">Cartão Amex <span>(Principal)</span></p>
-                                <p class="number-card">Final 0009</p>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <div id="address-saves" class="address-saves">
+                            <h2 class="painel-subtitle">
+                                Endereços Salvos
+                                <br><br>
+                            </h2>
+                            <div id="content-address">
+                                <div class="address">
+                                    <div class="item">
+                                        <p class="type-address">Casa <span>(Principal)</span></p>
+                                        <p class="name-address">Rua da Paz, Moema, São Paulo - SP, 01255-250</p>
+                                    </div>
+                                    <div class="action"></div>
+                                    <div class="modal-address">
+
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="item">
+                                        <p class="type-address">Trabalho <span></span></p>
+                                        <p class="name-address">Rua da Paciência, Moema, Salvador - BA, 55454-250</p>
+                                    </div>
+                                    <div class="action"></div>
+                                </div>
+                                <button class="add-address">Adicionar</button>
                             </div>
-                            <div class="action"></div>
+                        </div>
+
+                        <div id="address-form" class="hidden">
+                            <h2 class="painel-subtitle">Cadastrar Endereço</h2>
+                            <br><br>
+                            <form id="form-cadastro-pessoais" action="">
+                                <div class="form-row">
+                                    <div class="form-group colunm-one">
+                                        <label for="cep">CEP</label>
+                                        <input id="cep" type="text" name="cep" pattern="\d{5}-\d{3}" maxlength="9"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-one">
+                                        <label for="rua">Rua</label>
+                                        <input id="rua" type="text" name="rua" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm">
+                                        <label for="numero">Número</label>
+                                        <input id="numero" type="text" name="numero" required>
+                                    </div>
+                                    <div class="form-group colunm">
+                                        <label for="complemento">Complemento</label>
+                                        <input id="complemento" type="text" name="complemento">
+                                    </div>
+                                    <div class="form-group colunm">
+                                        <label for="complemento">Bairro</label>
+                                        <input id="complemento" type="text" name="complemento">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label>Estado</label>
+                                        <select name="estado" required>
+                                            <option value="">Selecione</option>
+                                            <option>BA</option>
+                                            <option>SP</option>
+                                            <option>RJ</option>
+                                            <option>MG</option>
+                                            <option>RS</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label>cidade</label>
+                                        <select name="cidade" required>
+                                            <option value="">Selecione</option>
+                                            <option>BA</option>
+                                            <option>SP</option>
+                                            <option>RJ</option>
+                                            <option>MG</option>
+                                            <option>RS</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label>Tipo de endereço</label>
+                                        <select name="tipo" required>
+                                            <option value="">Selecione</option>
+                                            <option value="Residencial">Residencial</option>
+                                            <option value="Comercial">Comercial</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Salvar">
+                                <button type="button" class="cancel-btn">Cancelar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -180,7 +356,8 @@
     <script src="assets/scripts/lazy.js"></script>
     <script src="assets/scripts/menu-responsivo.js"></script>
 
-    <!-- Scripts - IP -->
+    <!-- Scripts - Informações Pessoais -->
+    <script src="assets/scripts/informacoes-pessoais.js"></script>
 
 </body>
 
