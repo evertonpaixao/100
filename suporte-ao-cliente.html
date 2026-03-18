@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100% VOCÊ · Health & Nutrition | Formas de pagamento</title>
+    <title>100% VOCÊ · Health & Nutrition | Suporte ao cliente</title>
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/painel.css" />
-    <link rel="stylesheet" href="assets/styles/formas-de-pagamento.css" />
+    <link rel="stylesheet" href="assets/styles/suporte-cliente.css" />
 
 </head>
 
@@ -73,40 +73,6 @@
         </div>
     </div>
 
-    <!-- Modal de confirmação de exclusão -->
-    <div id="confirm-modal" class="modal">
-        <div class="modal-content confirm-modal">
-            <div class="modal-icon warning">⚠️</div>
-            <h3 class="modal-title">Confirmar Exclusão</h3>
-            <p class="modal-message">Tem certeza que deseja excluir este cartão?</p>
-            <div class="modal-buttons">
-                <button class="modal-button confirm" id="confirm-yes">Sim</button>
-                <button class="modal-button cancel" id="confirm-no">Não</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de sucesso -->
-    <div id="success-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-icon">✅</div>
-            <h3 class="modal-title">Sucesso!</h3>
-            <p class="modal-message">Cartão salvo com sucesso!</p>
-            <button class="modal-button" id="modal-ok-btn">OK</button>
-        </div>
-    </div>
-
-    <!-- Modal de erro (opcional) -->
-    <div id="error-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-icon error">❌</div>
-            <h3 class="modal-title">Erro!</h3>
-            <p class="modal-message" id="error-message">Por favor, corrija os erros no formulário
-            </p>
-            <button class="modal-button error" id="modal-error-ok-btn">OK</button>
-        </div>
-    </div>
-
     <!-- painel -->
     <section id="painel" class="page">
         <div class="painel container">
@@ -136,77 +102,39 @@
                                         Favoritos</a></li>
                                 <li><a href="informacoes-pessoais.html"><img src="assets/images/icon-pessoal.png"
                                             alt="" /> Informações Pessoais</a></li>
-                                <li class="active"><a href="formas-de-pagamento.html"><img
-                                            src="assets/images/icon-pagamento.png" alt="" /> Formas de
+                                <li><a href="formas-de-pagamento.html"><img src="assets/images/icon-pagamento.png"
+                                            alt="" /> Formas de
                                         Pagamento</a></li>
                                 <hr>
-                                <li><a href="suporte-ao-cliente.html"><img src="assets/images/icon-cliente.png"
-                                            alt="" /> Suporte ao Cliente</a></li>
+                                <li class="active"><a href="suporte-ao-cliente.html"><img
+                                            src="assets/images/icon-cliente.png" alt="" /> Suporte ao Cliente</a></li>
                                 <li class="link-sair"><a><img src="assets/images/icon-sair.png" alt="" />
                                         Sair</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="column left">
-                        <div id="cards">
-                            <div class="card">
+                        <div id="suportes">
+                            <div class="suporte">
                                 <div class="item">
-                                    <p class="name-card">Cartão Amex <span>(Principal)</span></p>
-                                    <p class="number-card">Final 0009</p>
+                                    <p class="title-suporte">Email para Contato</p>
+                                    <p class="info-suporte"><a href="mailto:suporte@cemporcentovoce.com.br"
+                                            target="_blank">suporte@cemporcentovoce.com.br</a></p>
                                 </div>
-                                <div class="action"><img src="assets/images/icon-lixeira.png" alt="" /></div>
-                            </div>
-                            <div class="card">
                                 <div class="item">
-                                    <p class="name-card">Cartão Visa <span></span></p>
-                                    <p class="number-card">Final 0002</p>
+                                    <p class="title-suporte">Telefone SAC</p>
+                                    <p class="info-suporte"><a href="tel:+557197300076" target="_blank">(71)
+                                            97300-0076</a></p>
                                 </div>
-                                <div class="action"><img src="assets/images/icon-lixeira.png" alt="" /></div>
                             </div>
-                            <button class="add-card">Adicionar</button>
                         </div>
-
-                        <div id="card-form" class="hidden">
-                            <h2 class="painel-subtitle">Cadastrar Cartão</h2>
-                            <br><br>
-                            <form id="form-cadastro-cartao" action="">
-                                <div class="form-group">
-                                    <label for="numero">Número do Cartão</label>
-                                    <div class="cartao-input-wrapper">
-                                        <input type="text" id="numero" name="numero" class="cartao-input"
-                                            placeholder="**** **** **** ****" maxlength="19" required>
-                                        <div class="bandeira-container">
-                                            <img src="" alt="Bandeira" id="bandeira-img" class="bandeira-img">
-                                        </div>
-                                    </div>
-                                    <div class="error-message" id="numero-error"></div>
+                        <div id="suportes">
+                            <div class="suporte">
+                                <div class="item">
+                                    <p class="title-suporte">Chat de Atendimento <span>⬤</span></p>
+                                    <p class="info-suporte">Funcionamento das 6:00 às 17:00 - seg - sex</p>
                                 </div>
-
-                                <!-- Outros campos do formulário -->
-                                <div class="form-group">
-                                    <label for="nome">Nome Impresso no Cartão</label>
-                                    <input type="text" id="nome" name="nome" required>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="validade">Validade</label>
-                                        <input type="text" id="validade" name="validade" placeholder="MM/AA"
-                                            maxlength="5" class="validade-input">
-                                        <div class="error-message" id="validade-error"></div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="***"
-                                            class="cvv-input">
-                                        <div class="error-message" id="cvv-error"></div>
-                                    </div>
-                                </div>
-
-                                <input type="submit" value="Salvar" />
-                                <button type="button" class="cancel-btn">Cancelar</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,7 +209,6 @@
     <script src="assets/scripts/menu-responsivo.js"></script>
 
     <!-- Scripts - Fomas de Pagamento -->
-    <script src="assets/scripts/formas-de-pagamento.js"></script>
     <script src="assets/scripts/painel.js"></script>
 
 </body>

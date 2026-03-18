@@ -85,6 +85,10 @@ hr {
   padding: 5px 10px;
 }
 
+.link-sair {
+  cursor: pointer;
+}
+
 .painel .row .flex .column .menu ul li:hover img {
   filter: contrast(1);
 }

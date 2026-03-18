@@ -61,6 +61,19 @@
     </header>
 
     <!-- Modal de confirmação de exclusão -->
+    <div id="confirm-modal-sair" class="modal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-icon warning">⚠️</div>
+            <h3 class="modal-title">Confirmar saída do painel</h3>
+            <p class="modal-message">Tem certeza que deseja sair?</p>
+            <div class="modal-buttons">
+                <button class="modal-button confirm" id="confirm-yes-sair">Sim</button>
+                <button class="modal-button cancel" id="confirm-no-sair">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação de exclusão -->
     <div id="confirm-modal" class="modal">
         <div class="modal-content confirm-modal">
             <div class="modal-icon warning">⚠️</div>
@@ -80,6 +93,26 @@
             <h3 class="modal-title">Sucesso!</h3>
             <p class="modal-message">Edição salvo com sucesso!</p>
             <button class="modal-button" id="modal-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal de sucesso - Endereço -->
+    <div id="success-modal-address" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Cadastro efetivado com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn-address">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal de sucesso - Endereço -->
+    <div id="success-modal-address-editar" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Edição efetivada com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn-address-editar">OK</button>
         </div>
     </div>
 
@@ -129,7 +162,7 @@
                                 <hr>
                                 <li><a href="suporte-ao-cliente.html"><img src="assets/images/icon-cliente.png"
                                             alt="" /> Suporte ao Cliente</a></li>
-                                <li class="link-sair"><a href=""><img src="assets/images/icon-sair.png" alt="" />
+                                <li class="link-sair"><a><img src="assets/images/icon-sair.png" alt="" />
                                         Sair</a></li>
                             </ul>
                         </div>
@@ -200,8 +233,9 @@
                                         <p class="name-address">Rua da Paz, Moema, São Paulo - SP, 01255-250</p>
                                     </div>
                                     <div class="action"></div>
-                                    <div class="modal-address">
-
+                                    <div class="modal-address hidden">
+                                        <button class="btn-excluir" type="button">Excluir</button>
+                                        <button class="btn-editar-address" type="button">Editar</button>
                                     </div>
                                 </div>
                                 <div class="address">
@@ -210,63 +244,85 @@
                                         <p class="name-address">Rua da Paciência, Moema, Salvador - BA, 55454-250</p>
                                     </div>
                                     <div class="action"></div>
+                                    <div class="modal-address hidden">
+                                        <button class="btn-excluir" type="button">Excluir</button>
+                                        <button class="btn-editar-address" type="button">Editar</button>
+                                    </div>
                                 </div>
                                 <button class="add-address">Adicionar</button>
                             </div>
                         </div>
 
+                        <!-- Formulário de Cadastro -->
                         <div id="address-form" class="hidden">
                             <h2 class="painel-subtitle">Cadastrar Endereço</h2>
                             <br><br>
-                            <form id="form-cadastro-pessoais" action="">
+                            <form id="form-cadastro-pessoais" class="form-dados-pessoais-address" action="">
                                 <div class="form-row">
                                     <div class="form-group colunm-one">
-                                        <label for="cep">CEP</label>
-                                        <input id="cep" type="text" name="cep" pattern="\d{5}-\d{3}" maxlength="9"
-                                            required>
+                                        <label for="cep-cadastro">CEP</label>
+                                        <input id="cep-cadastro" class="cep" type="text" name="cep"
+                                            pattern="\d{5}-\d{3}" maxlength="9" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group colunm-one">
-                                        <label for="rua">Rua</label>
-                                        <input id="rua" type="text" name="rua" required>
+                                        <label for="rua-cadastro">Rua</label>
+                                        <input id="rua-cadastro" type="text" name="rua" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group colunm">
-                                        <label for="numero">Número</label>
-                                        <input id="numero" type="text" name="numero" required>
+                                        <label for="numero-cadastro">Número</label>
+                                        <input id="numero-cadastro" type="text" name="numero" required>
                                     </div>
                                     <div class="form-group colunm">
-                                        <label for="complemento">Complemento</label>
-                                        <input id="complemento" type="text" name="complemento">
+                                        <label for="complemento-cadastro">Complemento</label>
+                                        <input id="complemento-cadastro" type="text" name="complemento">
                                     </div>
                                     <div class="form-group colunm">
-                                        <label for="complemento">Bairro</label>
-                                        <input id="complemento" type="text" name="complemento">
+                                        <label for="bairro-cadastro">Bairro</label>
+                                        <input id="bairro-cadastro" type="text" name="bairro">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group colunm-two">
                                         <label>Estado</label>
-                                        <select name="estado" required>
-                                            <option value="">Selecione</option>
-                                            <option>BA</option>
-                                            <option>SP</option>
-                                            <option>RJ</option>
-                                            <option>MG</option>
-                                            <option>RS</option>
+                                        <select id="estado-cadastro" name="estado" required disabled>
+                                            <option value="">Selecione o estado</option>
+                                            <option value="AC">Acre (AC)</option>
+                                            <option value="AL">Alagoas (AL)</option>
+                                            <option value="AP">Amapá (AP)</option>
+                                            <option value="AM">Amazonas (AM)</option>
+                                            <option value="BA">Bahia (BA)</option>
+                                            <option value="CE">Ceará (CE)</option>
+                                            <option value="DF">Distrito Federal (DF)</option>
+                                            <option value="ES">Espírito Santo (ES)</option>
+                                            <option value="GO">Goiás (GO)</option>
+                                            <option value="MA">Maranhão (MA)</option>
+                                            <option value="MT">Mato Grosso (MT)</option>
+                                            <option value="MS">Mato Grosso do Sul (MS)</option>
+                                            <option value="MG">Minas Gerais (MG)</option>
+                                            <option value="PA">Pará (PA)</option>
+                                            <option value="PB">Paraíba (PB)</option>
+                                            <option value="PR">Paraná (PR)</option>
+                                            <option value="PE">Pernambuco (PE)</option>
+                                            <option value="PI">Piauí (PI)</option>
+                                            <option value="RJ">Rio de Janeiro (RJ)</option>
+                                            <option value="RN">Rio Grande do Norte (RN)</option>
+                                            <option value="RS">Rio Grande do Sul (RS)</option>
+                                            <option value="RO">Rondônia (RO)</option>
+                                            <option value="RR">Roraima (RR)</option>
+                                            <option value="SC">Santa Catarina (SC)</option>
+                                            <option value="SP">São Paulo (SP)</option>
+                                            <option value="SE">Sergipe (SE)</option>
+                                            <option value="TO">Tocantins (TO)</option>
                                         </select>
                                     </div>
                                     <div class="form-group colunm-two">
-                                        <label>cidade</label>
-                                        <select name="cidade" required>
-                                            <option value="">Selecione</option>
-                                            <option>BA</option>
-                                            <option>SP</option>
-                                            <option>RJ</option>
-                                            <option>MG</option>
-                                            <option>RS</option>
+                                        <label>Cidade</label>
+                                        <select id="cidade-cadastro" name="cidade" required disabled>
+                                            <option value="">Selecione a cidade</option>
                                         </select>
                                     </div>
                                 </div>
@@ -275,8 +331,8 @@
                                         <label>Tipo de endereço</label>
                                         <select name="tipo" required>
                                             <option value="">Selecione</option>
-                                            <option value="Residencial">Residencial</option>
-                                            <option value="Comercial">Comercial</option>
+                                            <option value="Casa">Casa</option>
+                                            <option value="Trabalho">Trabalho</option>
                                         </select>
                                     </div>
                                 </div>
@@ -284,6 +340,94 @@
                                 <button type="button" class="cancel-btn">Cancelar</button>
                             </form>
                         </div>
+
+                        <!-- Formulário de Edição -->
+                        <div id="address-form-editar" class="hidden">
+                            <h2 class="painel-subtitle">Editar Endereço</h2>
+                            <br><br>
+                            <form id="form-cadastro-pessoais" class="form-dados-pessoais-address-editar" action="">
+                                <div class="form-row">
+                                    <div class="form-group colunm-one">
+                                        <label for="cep-editar">CEP</label>
+                                        <input id="cep-editar" class="cep" type="text" name="cep" pattern="\d{5}-\d{3}"
+                                            maxlength="9" required value="40300-550">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-one">
+                                        <label for="rua-editar">Rua</label>
+                                        <input id="rua-editar" type="text" name="rua" required
+                                            value="Rua Aloísio Azevedo">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm">
+                                        <label for="numero-editar">Número</label>
+                                        <input id="numero-editar" type="text" name="numero" required value="18">
+                                    </div>
+                                    <div class="form-group colunm">
+                                        <label for="complemento-editar">Complemento</label>
+                                        <input id="complemento-editar" type="text" name="complemento" value="casa 02">
+                                    </div>
+                                    <div class="form-group colunm">
+                                        <label for="bairro-editar">Bairro</label>
+                                        <input id="bairro-editar" type="text" name="bairro" value="Barbalho">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label>Estado</label>
+                                        <select id="estado-editar" name="estado" required disabled>
+                                            <option value="BA">Bahia (BA)</option>
+                                            <option value="AC">Acre (AC)</option>
+                                            <option value="AL">Alagoas (AL)</option>
+                                            <option value="AP">Amapá (AP)</option>
+                                            <option value="AM">Amazonas (AM)</option>
+                                            <option value="CE">Ceará (CE)</option>
+                                            <option value="DF">Distrito Federal (DF)</option>
+                                            <option value="ES">Espírito Santo (ES)</option>
+                                            <option value="GO">Goiás (GO)</option>
+                                            <option value="MA">Maranhão (MA)</option>
+                                            <option value="MT">Mato Grosso (MT)</option>
+                                            <option value="MS">Mato Grosso do Sul (MS)</option>
+                                            <option value="MG">Minas Gerais (MG)</option>
+                                            <option value="PA">Pará (PA)</option>
+                                            <option value="PB">Paraíba (PB)</option>
+                                            <option value="PR">Paraná (PR)</option>
+                                            <option value="PE">Pernambuco (PE)</option>
+                                            <option value="PI">Piauí (PI)</option>
+                                            <option value="RJ">Rio de Janeiro (RJ)</option>
+                                            <option value="RN">Rio Grande do Norte (RN)</option>
+                                            <option value="RS">Rio Grande do Sul (RS)</option>
+                                            <option value="RO">Rondônia (RO)</option>
+                                            <option value="RR">Roraima (RR)</option>
+                                            <option value="SC">Santa Catarina (SC)</option>
+                                            <option value="SP">São Paulo (SP)</option>
+                                            <option value="SE">Sergipe (SE)</option>
+                                            <option value="TO">Tocantins (TO)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label>Cidade</label>
+                                        <select id="cidade-editar" name="cidade" required disabled>
+                                            <option value="Salvador">Salvador</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label>Tipo de endereço</label>
+                                        <select name="tipo" required>
+                                            <option value="Casa">Casa</option>
+                                            <option value="Trabalho">Trabalho</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Editar">
+                                <button type="button" class="cancel-btn cancel-btn-address">Cancelar</button>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -358,6 +502,8 @@
 
     <!-- Scripts - Informações Pessoais -->
     <script src="assets/scripts/informacoes-pessoais.js"></script>
+    <script src="assets/scripts/painel.js"></script>
+
 
 </body>
 

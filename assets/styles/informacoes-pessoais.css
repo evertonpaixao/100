@@ -26,11 +26,36 @@
   pointer-events: none;
 }
 
+#address-form.hidden {
+  opacity: 0.5;
+  transform: translateX(-20px);
+  pointer-events: auto;
+  height: 0;
+  overflow: hidden;
+}
+
 #address-form.visible {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
   z-index: 3;
+  height: auto;
+}
+
+#address-form-editar.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none; /* Impede cliques no elemento invisível */
+  height: 0;
+  overflow: hidden;
+}
+
+#address-form-editar.visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 3;
+  height: auto;
 }
 
 #form-cadastro-pessoais input,
@@ -147,6 +172,7 @@ button[type="submit"]:disabled {
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .painel .row .flex .column .address .item {
@@ -190,6 +216,29 @@ button[type="submit"]:disabled {
 
 .painel .row .flex .column .add-address:hover {
   background-color: #dcdcdc;
+}
+
+/* Estilos do Modal Address */
+.modal-address {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  background: #dcdcdc;
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 10px;
+  z-index: 9;
+  box-shadow: 4px 5px 10px 0px #999;
+}
+
+.modal-address.hidden {
+  display: none;
+}
+
+.modal-address.visible {
+  display: flex;
 }
 
 /* Estilos do Modal */
@@ -279,17 +328,23 @@ button[type="submit"]:disabled {
   background-color: #da190b;
 }
 
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-flow: column;
+  }
+}
+
 @media screen and (max-width: 991px) {
-  .painel .row .flex .column .card .item .name-card {
+  .painel .row .flex .column .address .item .type-address {
     font-size: 1.1rem;
   }
-  .painel .row .flex .column .card .item .number-card {
+  .painel .row .flex .column .address .item .name-address {
     font-size: 0.75rem;
   }
-  .painel .row .flex .column .add-card {
+  .painel .row .flex .column .add-address {
     font-size: 0.9rem;
   }
-  #form-cadastro-cartao input[type="submit"],
+  #form-cadastro-pessoais input[type="submit"],
   .cancel-btn {
     font-size: 0.9rem;
   }
