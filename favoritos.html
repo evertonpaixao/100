@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100% VOCÊ · Health & Nutrition | Suporte ao cliente</title>
+    <title>100% VOCÊ · Health & Nutrition | Favoritos</title>
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/painel.css" />
-    <link rel="stylesheet" href="assets/styles/suporte-cliente.css" />
+    <link rel="stylesheet" href="assets/styles/favorito.css" />
 
 </head>
 
@@ -92,13 +92,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="flex gsap-reveal">
-                    <div class="column right">
+                <div class="flex">
+                    <div class="column right gsap-reveal">
                         <div class="menu">
                             <ul>
                                 <li><a href="meus-pedidos.html"><img src="assets/images/icon-pedido.png" alt="" /> Meus
                                         Pedidos</a></li>
-                                <li><a href="favoritos.html"><img src="assets/images/icon-favorito.png" alt="" />
+                                <li class="active"><a href="favoritos.html"><img src="assets/images/icon-favorito.png"
+                                            alt="" />
                                         Favoritos</a></li>
                                 <li><a href="informacoes-pessoais.html"><img src="assets/images/icon-pessoal.png"
                                             alt="" /> Informações Pessoais</a></li>
@@ -106,35 +107,111 @@
                                             alt="" /> Formas de
                                         Pagamento</a></li>
                                 <hr>
-                                <li class="active"><a href="suporte-ao-cliente.html"><img
-                                            src="assets/images/icon-cliente.png" alt="" /> Suporte ao Cliente</a></li>
+                                <li><a href="suporte-ao-cliente.html"><img src="assets/images/icon-cliente.png"
+                                            alt="" /> Suporte ao Cliente</a></li>
                                 <li class="link-sair"><a><img src="assets/images/icon-sair.png" alt="" />
                                         Sair</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="column left">
-                        <div id="suportes">
-                            <div class="suporte">
-                                <div class="item">
-                                    <p class="title-suporte">Email para Contato</p>
-                                    <p class="info-suporte"><a href="mailto:suporte@cemporcentovoce.com.br"
-                                            target="_blank">suporte@cemporcentovoce.com.br</a></p>
-                                </div>
-                                <div class="item">
-                                    <p class="title-suporte">Telefone SAC</p>
-                                    <p class="info-suporte"><a href="tel:+557197300076" target="_blank">(71)
-                                            97300-0076</a></p>
+                        <div id="favoritos">
+
+                            <!-- //*favorito*// -->
+                            <div class="favorito">
+                                <div class="content-favorito produtos">
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon active">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/creatina300g.png"
+                                                alt="" src="assets/uploads/creatina300g.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Creatina 100% Você - 300 G</h2>
+                                                <p class="text-uppercase">Creatina Monohidratada</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon active">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/melatonina.png"
+                                                alt="" src="assets/uploads/melatonina.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Melatonina - 30 Und</h2>
+                                                <p class="text-uppercase">Sabor Maracujá</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon active">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/meia.webp" alt=""
+                                                src="assets/uploads/meia.webp">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Meia 100% Você</h2>
+                                                <p class="text-uppercase">par de meia</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon active">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class=" foto-nome">
+                                            <img class="foto" loading="lazy"
+                                                data-src="assets/uploads/choco-energy-380-vanilla.png" alt=""
+                                                src="assets/uploads/choco-energy-380-vanilla.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Choco Energy - 380 G</h2>
+                                                <p class="text-uppercase">sabor vanilla latte</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="suportes">
-                            <div class="suporte">
-                                <div class="item">
-                                    <p class="title-suporte">Chat de Atendimento <span>⬤</span></p>
-                                    <p class="info-suporte">Funcionamento das 6:00 às 17:00 - seg - sex</p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -210,6 +287,7 @@
 
     <!-- Scripts - Fomas de Pagamento -->
     <script src="assets/scripts/painel.js"></script>
+    <script src="assets/scripts/favoritos.js"></script>
 
 </body>
 

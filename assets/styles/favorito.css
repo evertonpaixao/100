@@ -1,0 +1,449 @@
+.favorito {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  flex-flow: column;
+}
+
+.favorito:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.favorito .content-favorito {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: self-start;
+  width: 100%;
+}
+
+.favorito .item {
+  line-height: 1.5;
+}
+
+.favorito .content-favorito.status .item.flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  line-height: 1;
+}
+
+.favorito .content-favorito.status .item.flex .info-favorito:first-child {
+  width: 30%;
+}
+
+.favorito .content-favorito.produtos {
+  flex-wrap: wrap;
+}
+
+.favorito .content-favorito.produtos .item {
+  width: 32%;
+  position: relative;
+}
+
+.favorito .price {
+  font-weight: 700;
+  color: #cd5959;
+  background: #fff;
+  border-radius: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  margin-left: 6.4%;
+}
+
+.favorito .price .value {
+  padding: 0.3rem 0.6rem;
+  display: block;
+  font-size: 11px;
+}
+
+.favorito .content-favorito.produtos .foto-nome {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.favorito .content-favorito.produtos .foto-nome .foto {
+  width: 100%;
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  height: 320px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+.favorito .content-favorito.produtos .foto-nome .nome-produto {
+  width: 100%;
+}
+
+.favorito .content-favorito.produtos .foto-nome .nome-produto p big {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: -6px;
+}
+
+.favorito .content-favorito.produtos .foto-nome .title-produto {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.favorito .content-favorito.produtos .foto-nome p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.favorito .item .title-favorito {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.favorito .item .title-favorito span {
+  color: #45a049;
+}
+
+.favorito .item .info-favorito {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.favorito .item .info-favorito a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #424242;
+}
+
+.favorito .item .btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #536952;
+  text-decoration: none;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.favorito .item .btn:hover {
+  background-color: #dcdcdc;
+  color: #536952;
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.modal-icon.error {
+  color: #f44336;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-message {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #45a049;
+}
+
+.modal-button.cancel {
+  background-color: #da190b;
+}
+
+.modal-button.error {
+  background-color: #f44336;
+}
+
+.modal-button.error:hover {
+  background-color: #da190b;
+}
+
+@media screen and (max-width: 1020px) {
+  .favorito .item .btn {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .favorito .item .title-favorito {
+    font-size: 1.1rem;
+  }
+  .favorito .item .info-favorito {
+    font-size: 0.75rem;
+  }
+  .favorito .item .btn-nota {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .favorito .content-favorito.produtos .item {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .favorito {
+    flex-direction: column;
+  }
+  .favorito .content-favorito.status .item.flex {
+    flex-direction: row;
+  }
+  .favorito .item .btn-nota {
+    font-size: 0.7rem;
+  }
+  .favorito .item .btn-nota img {
+    width: 14px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .favorito .content-favorito.produtos .item {
+    width: 100%;
+  }
+  .favorito .content-favorito.status .item.flex {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    line-height: 1.2;
+  }
+
+  .favorito .content-favorito.status .item.flex .info-favorito:first-child {
+    width: 100%;
+  }
+  .favorito .content-favorito {
+    flex-flow: column;
+  }
+
+  .favorito .content-favorito.status .item.flex .info-favorito:last-child {
+    font-weight: bold;
+  }
+}
+
+/* ===== ESTILOS DO CORAÇÃO ===== */
+.heart-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.heart-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.heart-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.heart-icon i {
+  font-size: 24px;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+/* Estado ativo (clicado) */
+.heart-icon.active {
+  background: #fff;
+  border-color: #fff;
+  animation: heartBeat 0.4s ease-in-out;
+}
+
+.heart-icon.active i {
+  color: #ff4757;
+}
+
+/* Animação de batida do coração */
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animação de partículas quando clica */
+.heart-icon.active::before,
+.heart-icon.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ff4757;
+  opacity: 0;
+  animation: ripple 0.6s ease-out;
+}
+
+.heart-icon.active::after {
+  animation-delay: 0.1s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Efeito de pulsação contínua quando ativo */
+.heart-icon.active.pulse {
+  animation:
+    heartBeat 0.4s ease-in-out,
+    pulse 1.5s ease-in-out infinite 0.4s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+  }
+}
+
+/* Animação de shake para erro */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Mensagem de "Favoritado" */
+.favorite-message {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #ff4757;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.favorite-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}

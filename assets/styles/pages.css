@@ -1,9 +1,9 @@
-.faq {
+.pages {
   margin: 4rem auto;
   padding: 0 1rem;
 }
 
-.faq-title {
+.pages-title {
   font-size: 3.6rem;
   color: #333;
   margin-bottom: 10px;
@@ -12,7 +12,7 @@
   line-height: 1;
 }
 
-.faq .row {
+.pages .row {
   display: flex;
   gap: 7%;
   width: 100%;
@@ -21,11 +21,11 @@
   flex-direction: column;
 }
 
-.faq .row.center {
+.pages .row.center {
   align-items: center;
 }
 
-.faq .row .column {
+.pages .row .column {
   flex-wrap: wrap;
 }
 

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100% VOCÊ · Health & Nutrition | Produtos</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/font-awesome/all.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/produtos.css" />
+    <link rel="stylesheet" href="assets/styles/favorito.css" />
+
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL COM SUBMENU -->
+    <header id="header" class="top-bar">
+        <div class="nav-menu">
+            <!-- Menu Hamburguer Button -->
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav" class="nav-menu-items">
+                <div class="menu-item has-submenu">
+                    Produtos <i class="fas fa-chevron-down"></i>
+                    <div class="submenu">
+                        <a href="produto.html">Melatonina</a>
+                        <a href="produto.html">Creatina</a>
+                        <a href="produto.html">Energia</a>
+                        <a href="produto.html">Pré-treino</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="sobre-nos.html">Quem Somos</a>
+                </div>
+            </ul>
+
+            <div class="logo-area">
+                <a href="./"><img src="assets/images/logo.png" alt="Logo" /></a>
+            </div>
+
+            <div class="menu-icons">
+                <a href="favorito.html"><img class="favorite" src="assets/images/ico-coracao.png" alt="Favoritos" /></a>
+                <a href="carrinho.html"><img class="cart" src="assets/images/ico-carrinho.png"
+                        alt="Carrinho" /><!-- <div class="number">1</div> --></a>
+                <a href="minha-conta.html"><img class="login" src="assets/images/ico-perfil.png" alt="Perfil" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- produtos -->
+    <section id="produtos" class="page">
+        <div class="produtos container">
+            <div class="row header">
+                <div class="flex gsap-reveal">
+                    <div class="content">
+                        <h1 class="produtos-title">
+                            Todos os Produtos
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="flex">
+                    <div class="column right gsap-reveal">
+                        <button class="btn-filtro" type="button">Filtrar <i class="fas fa-chevron-down"></i></button>
+                        <div class="filtro">
+                            <form class="form-filtro">
+                                <div class="content-todos">
+                                    <div class="item">
+                                        <label class="radio-card">
+                                            <input type="radio" name="todos" value="todos">
+                                            <span class="content">
+                                                <span class="text">Todos os Produtos</span>
+                                                <i class="fas fa-check icon"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="content">
+                                    <h2 class="produtos-subtitle text-uppercase">Categorias</h2>
+                                </div>
+                                <hr>
+                                <!-- CATEGORIA -->
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="categoria" value="suplementos">
+                                        <span class="content">
+                                            <span class="text">Suplementos</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="categoria" value="proteinas">
+                                        <span class="content">
+                                            <span class="text">Proteínas</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="categoria" value="roupas">
+                                        <span class="content">
+                                            <span class="text">Roupas</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="categoria" value="acessorios">
+                                        <span class="content">
+                                            <span class="text">Acessórios</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="categoria" value="meias">
+                                        <span class="content">
+                                            <span class="text">Meias</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <hr>
+                                <div class="content">
+                                    <h2 class="produtos-subtitle text-uppercase">Sabor</h2>
+                                </div>
+                                <hr>
+                                <!-- SABOR -->
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="sabor" value="chocolate">
+                                        <span class="content">
+                                            <span class="text">Chocolate</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="sabor" value="baunilha">
+                                        <span class="content">
+                                            <span class="text">Baunilha</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="sabor" value="maracuja">
+                                        <span class="content">
+                                            <span class="text">Maracujá</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="sabor" value="vanilla-latte">
+                                        <span class="content">
+                                            <span class="text">Vanilla Latte</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <hr>
+                                <div class="content">
+                                    <h2 class="produtos-subtitle text-uppercase">Quantidade</h2>
+                                </div>
+                                <hr>
+                                <!-- QUANTIDADE -->
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="quantidade" value="300g">
+                                        <span class="content">
+                                            <span class="text">300G</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="quantidade" value="380g">
+                                        <span class="content">
+                                            <span class="text">380G</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label class="radio-card">
+                                        <input type="radio" name="quantidade" value="30und">
+                                        <span class="content">
+                                            <span class="text">30 und</span>
+                                            <i class="fas fa-check icon"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column left">
+                        <div id="favoritos">
+
+                            <!-- //*favorito*// -->
+                            <div class="favorito">
+                                <div class="content-favorito produtos">
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/creatina300g.png"
+                                                alt="" src="assets/uploads/creatina300g.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Creatina 100% Você - 300 G</h2>
+                                                <p class="text-uppercase">Creatina Monohidratada</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                                <input type="hidden" name="categoria" value="suplementos" />
+                                                <input type="hidden" name="sabor" value="outro" />
+                                                <input type="hidden" name="quantidade" value="300g" />
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/melatonina.png"
+                                                alt="" src="assets/uploads/melatonina.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Melatonina - 30 Und</h2>
+                                                <p class="text-uppercase">Sabor Maracujá</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                                <input type="hidden" name="categoria" value="suplementos" />
+                                                <input type="hidden" name="sabor" value="maracuja" />
+                                                <input type="hidden" name="quantidade" value="30und" />
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class="foto-nome">
+                                            <img class="foto" loading="lazy" data-src="assets/uploads/meia.webp" alt=""
+                                                src="assets/uploads/meia.webp">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Meia 100% Você</h2>
+                                                <p class="text-uppercase">par de meia</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                                <input type="hidden" name="categoria" value="meias" />
+                                                <input type="hidden" name="sabor" value="outro" />
+                                                <input type="hidden" name="quantidade" value="par" />
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                    <div class="product-card item gsap-reveal">
+                                        <div class="price"><span class="value">20% OFF</span></div>
+                                        <div class="heart-container">
+                                            <div class="heart-icon">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="favorite-message">Adicionado aos favoritos!</div>
+                                        </div>
+                                        <div class=" foto-nome">
+                                            <img class="foto" loading="lazy"
+                                                data-src="assets/uploads/choco-energy-380-vanilla.png" alt=""
+                                                src="assets/uploads/choco-energy-380-vanilla.png">
+                                            <div class="nome-produto">
+                                                <h2 class="title-produto">Choco Energy - 380 G</h2>
+                                                <p class="text-uppercase">sabor vanilla latte</p>
+                                                <p class="text-uppercase">
+                                                    <big>R$ 89,90</big>4x de 20,00 sem juros
+                                                </p>
+                                                <input type="hidden" name="categoria" value="suplementos" />
+                                                <input type="hidden" name="sabor" value="vanilla-latte" />
+                                                <input type="hidden" name="quantidade" value="380g" />
+                                            </div>
+                                            <input class="btn btn-product btn-carrinho" type="button"
+                                                value="Adicionar ao carrinho">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer container">
+            <div class="footer-item">
+                <h2 class="section-title">Receba nossas ofertas por e-mail</h2>
+                <div class="newsletter">
+                    <form id="form-news">
+                        <input type="email" placeholder="Digite seu e-mail" required />
+                        <input type="submit" class="btn btn-outline" value="Inscrever-se" />
+                    </form>
+                </div>
+                <div class="redes">
+                    <h2 class="section-title"><small>Siga nossas Redes Sociais</small></h2>
+                    <div class="icons">
+                        <a href="#"><img data-src="assets/images/ico-instagram.png" class="lazy-img" loading="lazy"
+                                alt="Instagram" /></a>
+                        <a href="#"><img data-src="assets/images/ico-facebook.png" class="lazy-img" loading="lazy"
+                                alt="Facebook" /></a>
+                        <a href="#"><img data-src="assets/images/ico-tiktok.png" class="lazy-img" loading="lazy"
+                                alt="TikTok" /></a>
+                        <a href="#"><img data-src="assets/images/ico-x.png" class="lazy-img" loading="lazy"
+                                alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Sobre</span></h2>
+                <a href="sobre-nos.html">Sobre Nós</a>
+                <a href="como-comprar.html">Como Comprar</a>
+                <a href="termos-e-condicoes.html">Termos e Condições</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="trocas-e-devolucoes.html">Política de Trocas e Devoluções</a>
+                <a href="minha-conta.html">Minha Conta</a>
+                <a href="seu-pedido.html">Acompanhe seu Pedido</a>
+                <a href="cards-colecionaveis.html">Cards Colecionáveis</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Empresa</span></h2>
+                <a href="nossa-equipe.html">Nossa Equipe</a>
+                <a href="vagas.html">Nossas Vagas / Carreiras</a>
+                <a href="nosso-proposito.html">Nosso Propósito</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Suporte</span></h2>
+                <a href="contato.html">Entre em Contato</a>
+                <a href="">Chat Online</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+        <div class="footer container bottom">
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 100% VOCÊ. Todos os direitos reservados.</p>
+                <img data-src="assets/images/logo.png" alt="Logo 100% VOCÊ" class="logo lazy-img" loading="lazy" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger - Geral -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/libs/lenis/lenis.min.js"></script>
+    <script src="assets/scripts/gsap-scrolltrigger-lenis.js"></script>
+    <script src="assets/scripts/lazy.js"></script>
+    <script src="assets/scripts/menu-responsivo.js"></script>
+
+    <!-- Scripts - Produtos -->
+    <script src="assets/scripts/favoritos.js"></script>
+    <script src="assets/scripts/produtos.js"></script>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100% VOCÊ · Health & Nutrition | Suporte ao cliente</title>
+    <title>100% VOCÊ · Health & Nutrition | Esqueci senha</title>
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/style.css" />
-    <link rel="stylesheet" href="assets/styles/painel.css" />
-    <link rel="stylesheet" href="assets/styles/suporte-cliente.css" />
+    <link rel="stylesheet" href="assets/styles/conta.css" />
 
 </head>
 
@@ -60,81 +59,35 @@
         </div>
     </header>
 
-    <!-- Modal de confirmação de exclusão -->
-    <div id="confirm-modal-sair" class="modal">
-        <div class="modal-content confirm-modal">
-            <div class="modal-icon warning">⚠️</div>
-            <h3 class="modal-title">Confirmar saída do painel</h3>
-            <p class="modal-message">Tem certeza que deseja sair?</p>
-            <div class="modal-buttons">
-                <button class="modal-button confirm" id="confirm-yes-sair">Sim</button>
-                <button class="modal-button cancel" id="confirm-no-sair">Não</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- painel -->
-    <section id="painel" class="page">
-        <div class="painel container">
+    <!-- conta -->
+    <section id="conta" class="page">
+        <div class="conta container">
             <div class="row header">
-                <div class="flex gsap-reveal">
+                <div class="flex center gsap-reveal">
                     <div class="content">
-                        <img src="assets/images/icon-avatar.png" alt="" />
-                    </div>
-                    <div class="content">
-                        <p class="text-bemvindo">
-                            Bem Vindo,
-                        </p>
-                        <h1 class="painel-title">
-                            Sérgio Gomes
-                        </h1>
+                        <h1 class="conta-title text-center">Esqueci senha</h1>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="flex gsap-reveal">
+                <div class="flex center gsap-reveal">
                     <div class="column right">
-                        <div class="menu">
-                            <ul>
-                                <li><a href="meus-pedidos.html"><img src="assets/images/icon-pedido.png" alt="" /> Meus
-                                        Pedidos</a></li>
-                                <li><a href="favoritos.html"><img src="assets/images/icon-favorito.png" alt="" />
-                                        Favoritos</a></li>
-                                <li><a href="informacoes-pessoais.html"><img src="assets/images/icon-pessoal.png"
-                                            alt="" /> Informações Pessoais</a></li>
-                                <li><a href="formas-de-pagamento.html"><img src="assets/images/icon-pagamento.png"
-                                            alt="" /> Formas de
-                                        Pagamento</a></li>
-                                <hr>
-                                <li class="active"><a href="suporte-ao-cliente.html"><img
-                                            src="assets/images/icon-cliente.png" alt="" /> Suporte ao Cliente</a></li>
-                                <li class="link-sair"><a><img src="assets/images/icon-sair.png" alt="" />
-                                        Sair</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column left">
-                        <div id="suportes">
-                            <div class="suporte">
-                                <div class="item">
-                                    <p class="title-suporte">Email para Contato</p>
-                                    <p class="info-suporte"><a href="mailto:suporte@cemporcentovoce.com.br"
-                                            target="_blank">suporte@cemporcentovoce.com.br</a></p>
+                        <div id="login-form">
+                            <h2 class="conta-subtitle">Esqueceu a sua senha?</h2>
+                            <hr>
+                            <p class="text-center">Para recuperar uma senha é simples! Informe seu e-mail no campo
+                                abaixo e receba ela por email cadastrado.</p>
+                            <form id="form-conta" action="meus-pedidos.html">
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label for="nome">Email</label>
+                                        <input id="email" type="email" name="email" placeholder="Informe seu email"
+                                            required>
+                                    </div>
                                 </div>
-                                <div class="item">
-                                    <p class="title-suporte">Telefone SAC</p>
-                                    <p class="info-suporte"><a href="tel:+557197300076" target="_blank">(71)
-                                            97300-0076</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="suportes">
-                            <div class="suporte">
-                                <div class="item">
-                                    <p class="title-suporte">Chat de Atendimento <span>⬤</span></p>
-                                    <p class="info-suporte">Funcionamento das 6:00 às 17:00 - seg - sex</p>
-                                </div>
-                            </div>
+                                <a href="minha-conta.html">Voltar</a>
+                                <button class="btn-Acessar" id="btn-Acessar" type="submit">Enviar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -174,7 +127,7 @@
                 <a href="termos-e-condicoes.html">Termos e Condições</a>
                 <a href="politica-de-privacidade.html">Política de Privacidade</a>
                 <a href="trocas-e-devolucoes.html">Política de Trocas e Devoluções</a>
-                <a href="minha-conta.html">Minha Conta</a>
+                <a href="minha-conta.html">Es</a>
                 <a href="seu-pedido.html">Acompanhe seu Pedido</a>
                 <a href="cards-colecionaveis.html">Cards Colecionáveis</a>
                 <a href="faq.html">FAQ</a>
@@ -207,9 +160,6 @@
     <script src="assets/scripts/gsap-scrolltrigger-lenis.js"></script>
     <script src="assets/scripts/lazy.js"></script>
     <script src="assets/scripts/menu-responsivo.js"></script>
-
-    <!-- Scripts - Fomas de Pagamento -->
-    <script src="assets/scripts/painel.js"></script>
 
 </body>
 
