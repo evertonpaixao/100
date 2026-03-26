@@ -228,7 +228,7 @@ hr {
       opacity 0.3s ease;
   }
   .produtos .row .flex .column .filtro.ativo {
-    max-height: 500px; /* ajuste conforme o conteúdo */
+    max-height: auto; /* ajuste conforme o conteúdo */
     opacity: 1;
   }
 }
