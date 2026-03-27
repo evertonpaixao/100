@@ -1,9 +1,14 @@
-.conta {
+.contato {
   margin: 4rem auto;
   padding: 0 1rem;
 }
 
-.conta-title {
+.contato a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contato-title {
   font-size: 3.6rem;
   color: #333;
   margin-bottom: 10px;
@@ -12,7 +17,7 @@
   line-height: 1;
 }
 
-.conta-subtitle {
+.contato-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
@@ -25,7 +30,7 @@ hr {
   width: 100%;
 }
 
-.conta .row {
+.contato .row {
   display: flex;
   width: 100%;
   max-width: 1440px;
@@ -34,23 +39,23 @@ hr {
   flex-direction: column;
 }
 
-.conta .row.header .flex {
+.contato .row.header .flex {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.conta .row .flex {
+.contato .row .flex {
   display: flex;
   gap: 20px;
   align-items: flex-start;
 }
 
-.conta .row .flex.center {
+.contato .row .flex.center {
   justify-content: center;
 }
 
-.conta .row .flex .column {
+.contato .row .flex .column {
   border: 1px solid #dcdcdc;
   border-radius: 20px;
   padding: 70px 20px;
@@ -58,82 +63,77 @@ hr {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-height: 512px;
-  height: 32vw;
+  /*  min-height: 512px;
+  height: 32vw; */
 }
 
-.conta .row .flex .column.full {
+.contato .row .flex .column.full {
   min-height: auto;
   height: auto;
   background-color: #f9f9f9;
 }
 
-.conta .row .flex .column.right {
+.contato .row .flex .column.right {
   width: 50%;
   margin-bottom: 50px;
   background-color: #f9f9f9;
 }
 
-.conta .row .flex .column.left {
+.contato .row .flex .column.left {
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: baseline;
 }
 
 #login-form {
   width: 100%;
 }
 
-#form-conta {
+#form-contato {
   margin-top: 2em;
 }
 
-.column.left #form-conta {
+.column.left #form-contato {
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 70px;
 }
 
-.column.left #form-conta img {
+.column.left #form-contato img {
   margin-top: 2rem;
 }
 
-#form-conta .form-row.column-two {
+#form-contato .form-row.column-two {
   display: flex;
   gap: 15px;
 }
 
-#form-conta .form-row.column-two .form-group {
+#form-contato .form-row.column-two .form-group {
   width: 100%;
 }
 
-#form-conta .form-row .form-group {
+#form-contato .form-row .form-group {
   position: relative;
 }
 
-#form-conta .form-row .form-group .toggleSenha {
-  position: absolute;
-  right: 16px;
-  top: 42px;
-  cursor: pointer;
-}
-
-#form-conta .form-row {
+#form-contato .form-row {
   margin-bottom: 2em;
 }
 
-#form-conta label {
+#form-contato label {
   margin-left: 16px;
 }
 
-#form-conta a {
+#form-contato a {
   float: right;
   margin-top: 15px;
   color: #333;
 }
 
-#form-conta input {
+#form-contato input,
+#form-contato textarea {
   border: none;
   background-color: #fff;
   border: 1px solid #dcdcdc;
@@ -150,8 +150,13 @@ hr {
   display: block;
 }
 
-#form-conta input[type="submit"],
-#form-conta button {
+#form-contato textarea {
+  border-radius: 10px;
+  height: 180px;
+}
+
+#form-contato input[type="submit"],
+#form-contato button {
   background-color: #3c3a3a;
   padding: 10px 30px;
   border: 1px solid #dcdcdc;
@@ -165,10 +170,16 @@ hr {
   margin-right: 10px;
 }
 
-#form-conta input[type="submit"]:hover,
-#form-conta button:hover {
+#form-contato input[type="submit"]:hover,
+#form-contato button:hover {
   background-color: #dcdcdc;
   color: #3c3a3a;
+}
+
+.column.left .icons img {
+  filter: brightness(0%);
+  padding: 5px;
+  margin-right: 2px;
 }
 
 /* Estilos do Modal */
@@ -259,18 +270,18 @@ hr {
 }
 
 @media screen and (max-width: 991px) {
-  .conta-title {
+  .contato-title {
     font-size: 2.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .conta .row .flex {
+  .contato .row .flex {
     flex-direction: column;
   }
 
-  .conta .row .flex .column.right,
-  .conta .row .flex .column.left {
+  .contato .row .flex .column.right,
+  .contato .row .flex .column.left {
     width: 100%;
   }
 }
