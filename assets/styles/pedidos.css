@@ -343,7 +343,7 @@
   transition: all 0.4s ease;
 }
 
-.status-steps.pedido::after {
+.status-steps.feito::after {
   width: calc(0% - 80px);
 }
 
@@ -420,7 +420,7 @@
   color: #666;
   transition: all 0.3s;
   line-height: 1.2;
-  max-width: 60px;
+  max-width: 96px;
   overflow: hidden;
 }
 
