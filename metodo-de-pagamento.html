@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100% VOCÊ · Health & Nutrition | Método de Pagamento</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/font-awesome/all.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/metodo-de-pagamento.css" />
+
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL COM SUBMENU -->
+    <header id="header" class="top-bar">
+        <div class="nav-menu">
+            <!-- Menu Hamburguer Button -->
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav" class="nav-menu-items">
+                <div class="menu-item has-submenu">
+                    Produtos <i class="fas fa-chevron-down"></i>
+                    <div class="submenu">
+                        <a href="produto.html">Melatonina</a>
+                        <a href="produto.html">Creatina</a>
+                        <a href="produto.html">Energia</a>
+                        <a href="produto.html">Pré-treino</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="sobre-nos.html">Quem Somos</a>
+                </div>
+            </ul>
+
+            <div class="logo-area">
+                <a href="./"><img src="assets/images/logo.png" alt="Logo" /></a>
+            </div>
+
+            <div class="menu-icons">
+                <a href="favorito.html"><img class="favorite" src="assets/images/ico-coracao.png" alt="Favoritos" /></a>
+                <a href="carrinho.html"><img class="cart" src="assets/images/ico-carrinho.png"
+                        alt="Carrinho" /><!-- <div class="number">1</div> --></a>
+                <a href="minha-conta.html"><img class="login" src="assets/images/ico-perfil.png" alt="Perfil" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de sucesso -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Edição salvo com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal de sucesso - Endereço -->
+    <div id="success-modal-address" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Cadastro efetivado com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn-address">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal de sucesso - Endereço -->
+    <div id="success-modal-address-editar" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message">Edição efetivada com sucesso!</p>
+            <button class="modal-button" id="modal-ok-btn-address-editar">OK</button>
+        </div>
+    </div>
+
+    <!-- metodo -->
+    <section id="metodo" class="page">
+        <div class="metodo container">
+            <div class="row">
+                <form id="form" class="form" action="">
+
+                    <div class="flex">
+                        <div class="column">
+
+                            <div id="cadastro-dados-pessoais" class="cadastro-dados-pessoais gsap-reveal">
+
+                                <h2 class="metodo-subtitle">
+                                    Entrega para:
+                                    <br><br>
+                                </h2>
+
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label for="nome">Nome</label>
+                                        <input id="nome" type="text" name="nome" required>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label for="sobrenome">Sobrenome</label>
+                                        <input id="sobrenome" type="text" name="sobrenome" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group colunm-two">
+                                        <label for="telefone">Telefone</label>
+                                        <input id="telefone" type="text" name="telefone"
+                                            pattern="\(\d{2}\)\s\d{4,5}-\d{4}" maxlength="15" required>
+                                    </div>
+                                    <div class="form-group colunm-two">
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" name="email" required>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="address-saves" class="address-saves gsap-reveal">
+                                <h2 class="metodo-subtitle">
+                                    <big>Confirme o endereço de entrega</big>
+                                    <br><br>
+                                </h2>
+                                <h3 class="metodo-subtitle">
+                                    Endereços Salvos
+                                    <br><br>
+                                </h3>
+                                <div id="content-address">
+                                    <div class="address">
+                                        <label>
+                                            <input type="radio" name="address" value="casa" checked>
+                                            <div class="item">
+                                                <p class="type-address">Casa <span>(Principal)</span></p>
+                                                <p class="name-address">Rua da Paz, Moema, São Paulo - SP, 01255-250</p>
+                                            </div>
+                                            <div class="selecionado">
+                                                <p>Selecionado</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="address">
+                                        <label>
+                                            <input type="radio" name="address" value="trabalho">
+                                            <div class="item">
+                                                <p class="type-address">Trabalho <span></span></p>
+                                                <p class="name-address">Rua da Paciência, Moema, Salvador - BA,
+                                                    55454-250
+                                                </p>
+                                            </div>
+                                            <div class="selecionado">
+                                                <p>Selecionado</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <button type="button" class="add-address">Adicionar outro endereço</button>
+
+                                    <!-- Formulário de Cadastro -->
+                                    <div id="address-form" class="hidden">
+                                        <h2 class="metodo-subtitle">Endereço</h2>
+                                        <br>
+                                        <div class="form-row">
+                                            <div class="form-group colunm">
+                                                <label for="cep-cadastro">CEP</label>
+                                                <input id="cep-cadastro" class="cep" type="text" name="cep"
+                                                    pattern="\d{5}-\d{3}" maxlength="9" required>
+                                            </div>
+                                            <div class="form-group colunm">
+                                                <label for="rua-cadastro">Rua</label>
+                                                <input id="rua-cadastro" type="text" name="rua" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group colunm">
+                                                <label for="numero-cadastro">Número</label>
+                                                <input id="numero-cadastro" type="text" name="numero" required>
+                                            </div>
+                                            <div class="form-group colunm">
+                                                <label for="complemento-cadastro">Complemento</label>
+                                                <input id="complemento-cadastro" type="text" name="complemento">
+                                            </div>
+                                            <div class="form-group colunm">
+                                                <label for="bairro-cadastro">Bairro</label>
+                                                <input id="bairro-cadastro" type="text" name="bairro">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group colunm-two">
+                                                <label>Estado</label>
+                                                <select id="estado-cadastro" name="estado" required disabled>
+                                                    <option value="">Selecione o estado</option>
+                                                    <option value="AC">Acre (AC)</option>
+                                                    <option value="AL">Alagoas (AL)</option>
+                                                    <option value="AP">Amapá (AP)</option>
+                                                    <option value="AM">Amazonas (AM)</option>
+                                                    <option value="BA">Bahia (BA)</option>
+                                                    <option value="CE">Ceará (CE)</option>
+                                                    <option value="DF">Distrito Federal (DF)</option>
+                                                    <option value="ES">Espírito Santo (ES)</option>
+                                                    <option value="GO">Goiás (GO)</option>
+                                                    <option value="MA">Maranhão (MA)</option>
+                                                    <option value="MT">Mato Grosso (MT)</option>
+                                                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                                                    <option value="MG">Minas Gerais (MG)</option>
+                                                    <option value="PA">Pará (PA)</option>
+                                                    <option value="PB">Paraíba (PB)</option>
+                                                    <option value="PR">Paraná (PR)</option>
+                                                    <option value="PE">Pernambuco (PE)</option>
+                                                    <option value="PI">Piauí (PI)</option>
+                                                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                                                    <option value="RN">Rio Grande do Norte (RN)</option>
+                                                    <option value="RS">Rio Grande do Sul (RS)</option>
+                                                    <option value="RO">Rondônia (RO)</option>
+                                                    <option value="RR">Roraima (RR)</option>
+                                                    <option value="SC">Santa Catarina (SC)</option>
+                                                    <option value="SP">São Paulo (SP)</option>
+                                                    <option value="SE">Sergipe (SE)</option>
+                                                    <option value="TO">Tocantins (TO)</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group colunm-two">
+                                                <label>Cidade</label>
+                                                <select id="cidade-cadastro" name="cidade" required disabled>
+                                                    <option value="">Selecione a cidade</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group colunm-two">
+                                                <label>Tipo de endereço</label>
+                                                <select name="tipo" required>
+                                                    <option value="">Selecione</option>
+                                                    <option value="Casa">Casa</option>
+                                                    <option value="Trabalho">Trabalho</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="entrega">
+                                <h3 class="metodo-subtitle">
+                                    Escolha o tipo de entrega
+                                    <br><br>
+                                </h3>
+                                <div class="options-frete">
+                                    <div class="item">
+                                        <input type="radio" id="pac" name="frete" value="PAC">
+                                        <label for="pac">
+                                            <span class="icon"></span>
+                                            <span>
+                                                Correios - PAC<br><small>Entre 5 a 10 dias úteis</small>
+                                            </span>
+                                            <p>R$ 22,70</p>
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="sedex" name="frete" value="SEDEX">
+                                        <label for="sedex">
+                                            <span class="icon"></span>
+                                            <span>
+                                                Correios - SEDEX<br><small>Chega quinta 13/03</small>
+                                            </span>
+                                            <p>R$ 52,70</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <p>O prazo de entrega <b>não contabiliza feriados.</b></p>
+                            </div>
+
+                            <div id="pagamento-method" class="pagamento-method gsap-reveal">
+                                <h2 class="metodo-subtitle">
+                                    Escolha o método de pagamento
+                                    <br><br>
+                                </h2>
+                                <div class="content-pagamento">
+                                    <div class="pagamento">
+                                        <label>
+                                            <input type="radio" name="pagamento" value="amex" checked>
+                                            <div class="item">
+                                                <p class="name-pagamento">Cartão Amex <span>(Principal)</span></p>
+                                                <p class="number-pagamento">Final 0072</p>
+                                                <div class="content-parcelas">
+                                                    <p class="name-pagamento">Parcelas</p>
+                                                    <select id="select-parcelas" name="parcelas" required>
+                                                        <option value="">Selecione a quantidade</option>
+                                                        <option value="1x">1x de <b>R$ 150,00</b> sem juros</option>
+                                                        <option value="2x">2x de <b>R$ 75,00</b> sem juros</option>
+                                                        <option value="3x">3x de <b>R$ 50,00</b> sem juros</option>
+                                                        <option value="4x">4x de <b>R$ 150,00</b> com juros</option>
+                                                        <option value="5x">5x de <b>R$ 75,00</b> com juros</option>
+                                                        <option value="6x">6x de <b>R$ 50,00</b> com juros</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="selecionado">
+                                                <p>Selecionado</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="pagamento">
+                                        <label>
+                                            <input type="radio" name="pagamento" value="visa">
+                                            <div class="item">
+                                                <p class="name-pagamento">Cartão Visa <span></span></p>
+                                                <p class="number-pagamento">Final 1234</p>
+                                                <div class="content-parcelas">
+                                                    <p class="name-pagamento">Parcelas</p>
+                                                    <select id="select-parcelas" name="parcelas" required>
+                                                        <option value="">Selecione a quantidade</option>
+                                                        <option value="1x">1x de R$ 150,00 sem juros</option>
+                                                        <option value="2x">2x de R$ 75,00 sem juros</option>
+                                                        <option value="3x">3x de R$ 50,00 sem juros</option>
+                                                        <option value="4x">4x de R$ 150,00 com juros</option>
+                                                        <option value="5x">5x de R$ 75,00 com juros</option>
+                                                        <option value="6x">6x de R$ 50,00 com juros</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="selecionado">
+                                                <p>Selecionado</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="content-pagamento-outro">
+                                    <h2 class="metodo-subtitle">
+                                        Outros métodos de pagamento
+                                        <br><br>
+                                    </h2>
+                                    <div class="options-formas">
+                                        <div class="pagamento">
+                                            <input type="radio" id="cartao" name="pagamento" value="cartao">
+                                            <label for="cartao">
+                                                <span class="btn-metodo">
+                                                    NOVO CARTÃO
+                                                </span>
+                                            </label>
+                                            <!-- <div class="content-parcelas cartao-de-credito">
+                                                <p class="name-pagamento">Parcelas</p>
+                                                <select id="select-parcelas" name="parcelas" required>
+                                                    <option value="">Selecione a quantidade</option>
+                                                    <option value="1x">1x de R$ 150,00 sem juros</option>
+                                                    <option value="2x">2x de R$ 75,00 sem juros</option>
+                                                    <option value="3x">3x de R$ 50,00 sem juros</option>
+                                                    <option value="4x">4x de R$ 150,00 com juros</option>
+                                                    <option value="5x">5x de R$ 75,00 com juros</option>
+                                                    <option value="6x">6x de R$ 50,00 com juros</option>
+                                                </select>
+                                            </div> -->
+                                        </div>
+                                        <div class="pagamento">
+                                            <input type="radio" id="boleto" name="pagamento" value="boleto">
+                                            <label for="boleto">
+                                                <span class="btn-metodo">
+                                                    BOLETO
+                                                </span class="btn-metodo">
+                                            </label>
+                                        </div>
+                                        <div class="pagamento">
+                                            <input type="radio" id="pix" name="pagamento" value="pix">
+                                            <label for="pix">
+                                                <span class="btn-metodo">
+                                                    PIX
+                                                </span class="btn-metodo">
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div id="form-cadastro-cartao" style="display: none;">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="numero">Número do Cartão</label>
+                                                <div class="cartao-input-wrapper">
+                                                    <input type="text" id="numero" name="numero" class="cartao-input"
+                                                        placeholder="**** **** **** ****" maxlength="19" required="">
+                                                    <div class="bandeira-container">
+                                                        <img src="" alt="Bandeira" id="bandeira-img"
+                                                            class="bandeira-img">
+                                                    </div>
+                                                </div>
+                                                <div class="error-message" id="numero-error"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="nome">Nome Impresso no Cartão</label>
+                                                <input type="text" id="nome" name="nome" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="validade">Validade</label>
+                                                <input type="text" id="validade" name="validade" placeholder="MM/AA"
+                                                    maxlength="5" class="validade-input">
+                                                <div class="error-message" id="validade-error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="cvv">CVV</label>
+                                                <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="***"
+                                                    class="cvv-input">
+                                                <div class="error-message" id="cvv-error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pedido-container">
+                                <div class="pedido gsap-reveal"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                    <div class="content-pedido">
+                                        <div class="item">
+                                            <p class="title-pedido">Confirme seu pedido</p>
+                                            <p class="info-pedido"><b>04 itens</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="content-pedido produtos">
+                                        <div class="item">
+                                            <div class="foto-nome">
+                                                <img class="foto" loading="lazy"
+                                                    data-src="assets/uploads/creatina300g.png" alt=""
+                                                    src="assets/uploads/creatina300g.png">
+                                                <div class="nome-produto">
+                                                    <h2 class="title-produto">Creatina 100% Você - 300 G</h2>
+                                                    <p class="text-uppercase">Creatina Monohidratada</p>
+                                                    <p class="text-uppercase">Qtd 1X = 89,90</p>
+                                                    <p class="text-uppercase">SKU: 0000000000000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="foto-nome">
+                                                <img class="foto" loading="lazy"
+                                                    data-src="assets/uploads/melatonina.png" alt=""
+                                                    src="assets/uploads/melatonina.png">
+                                                <div class="nome-produto">
+                                                    <h2 class="title-produto">Melatonina - 30 Und</h2>
+                                                    <p class="text-uppercase">Sabor Maracujá</p>
+                                                    <p class="text-uppercase">Qtd 1X = 89,90</p>
+                                                    <p class="text-uppercase">SKU: 0000000000000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="foto-nome">
+                                                <img class="foto" loading="lazy"
+                                                    data-src="assets/uploads/creatina300g.png" alt=""
+                                                    src="assets/uploads/creatina300g.png">
+                                                <div class="nome-produto">
+                                                    <h2 class="title-produto">Creatina 100% Você - 300 G</h2>
+                                                    <p class="text-uppercase">Creatina Monohidratada</p>
+                                                    <p class="text-uppercase">Qtd 1X = 89,90</p>
+                                                    <p class="text-uppercase">SKU: 0000000000000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="foto-nome">
+                                                <img class="foto" loading="lazy"
+                                                    data-src="assets/uploads/melatonina.png" alt=""
+                                                    src="assets/uploads/melatonina.png">
+                                                <div class="nome-produto">
+                                                    <h2 class="title-produto">Melatonina - 30 Und</h2>
+                                                    <p class="text-uppercase">Sabor Maracujá</p>
+                                                    <p class="text-uppercase">Qtd 1X = 89,90</p>
+                                                    <p class="text-uppercase">SKU: 0000000000000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pedido resumo gsap-reveal">
+                                    <h2 class="metodo-subtitle">
+                                        <small>Resumo da compra</small>
+                                    </h2>
+                                    <div class="content">
+                                        <div class="item">
+                                            <p class="dados-pedido">Valor dos produtos</p>
+                                            <p class="valor-pedido">R$ 359,60</p>
+                                        </div>
+                                        <div class="item">
+                                            <p class="dados-pedido">Desconto progressivo</p>
+                                            <p class="valor-pedido">R$ 22,70</p>
+                                        </div>
+                                        <div class="item">
+                                            <p class="dados-pedido">Valor do frete</p>
+                                            <p class="valor-pedido">R$ 22,70</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <p class="dados-pedido">Total</p>
+                                        <p class="valor-pedido">R$ 359,60</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer container">
+            <div class="footer-item">
+                <h2 class="section-title">Receba nossas ofertas por e-mail</h2>
+                <div class="newsletter">
+                    <form id="form-news">
+                        <input type="email" placeholder="Digite seu e-mail" required />
+                        <input type="submit" class="btn btn-outline" value="Inscrever-se" />
+                    </form>
+                </div>
+                <div class="redes">
+                    <h2 class="section-title"><small>Siga nossas Redes Sociais</small></h2>
+                    <div class="icons">
+                        <a href="#"><img data-src="assets/images/ico-instagram.png" class="lazy-img" loading="lazy"
+                                alt="Instagram" /></a>
+                        <a href="#"><img data-src="assets/images/ico-facebook.png" class="lazy-img" loading="lazy"
+                                alt="Facebook" /></a>
+                        <a href="#"><img data-src="assets/images/ico-tiktok.png" class="lazy-img" loading="lazy"
+                                alt="TikTok" /></a>
+                        <a href="#"><img data-src="assets/images/ico-x.png" class="lazy-img" loading="lazy"
+                                alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Sobre</span></h2>
+                <a href="sobre-nos.html">Sobre Nós</a>
+                <a href="como-comprar.html">Como Comprar</a>
+                <a href="termos-e-condicoes.html">Termos e Condições</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="trocas-e-devolucoes.html">Política de Trocas e Devoluções</a>
+                <a href="minha-conta.html">Minha Conta</a>
+                <a href="seu-pedido.html">Acompanhe seu Pedido</a>
+                <a href="cards-colecionaveis.html">Cards Colecionáveis</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Empresa</span></h2>
+                <a href="nossa-equipe.html">Nossa Equipe</a>
+                <a href="vagas.html">Nossas Vagas / Carreiras</a>
+                <a href="nosso-proposito.html">Nosso Propósito</a>
+            </div>
+            <div class="footer-item">
+                <h2 class="section-title"><span>Suporte</span></h2>
+                <a href="contato.html">Entre em Contato</a>
+                <a href="">Chat Online</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+        <div class="footer container bottom">
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 100% VOCÊ. Todos os direitos reservados.</p>
+                <img data-src="assets/images/logo.png" alt="Logo 100% VOCÊ" class="logo lazy-img" loading="lazy" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger - Geral -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/libs/lenis/lenis.min.js"></script>
+    <script src="assets/scripts/gsap-scrolltrigger-lenis.js"></script>
+    <script src="assets/scripts/lazy.js"></script>
+    <script src="assets/scripts/menu-responsivo.js"></script>
+
+    <!-- Scripts - Método de Pagamento -->
+    <script src="assets/scripts/informacoes-pessoais.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const radios = document.querySelectorAll('input[name="pagamento"]');
+            const formCartao = document.getElementById("form-cadastro-cartao");
+
+            function toggleForm() {
+                const selected = document.querySelector('input[name="pagamento"]:checked');
+                formCartao.style.display = selected && selected.value === "cartao" ? "block" : "none";
+            }
+
+            radios.forEach(radio => {
+                radio.addEventListener("change", toggleForm);
+            });
+
+            toggleForm(); // roda ao carregar
+        });
+    </script>
+
+
+</body>
+
+</html>
