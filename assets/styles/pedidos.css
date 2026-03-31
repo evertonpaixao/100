@@ -306,24 +306,26 @@
 }
 
 /* Apenas a classe status-steps e seus elementos */
+.step-container {
+  width: 100%;
+  margin-top: 25px;
+}
+
 .status-steps {
   display: flex;
   justify-content: space-between;
   position: relative;
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  max-width: 900px;
+  padding: 6px;
+  max-width: 100%;
   width: 100%;
 }
 
 .status-steps::before {
   content: "";
   position: absolute;
-  top: 35px;
-  left: 40px;
-  right: 40px;
+  top: 26px;
+  left: 10px;
+  right: 15px;
   height: 3px;
   background: #e0e0e0;
   z-index: 1;
@@ -332,33 +334,52 @@
 .status-steps::after {
   content: "";
   position: absolute;
-  top: 35px;
-  left: 40px;
+  top: 26px;
+  left: 10px;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    #7a6948 var(--progress-percent, 0%),
-    #e0e0e0 var(--progress-percent, 0%)
-  );
+  background: #7a6948;
   width: calc(100% - 80px);
   z-index: 1;
   transition: all 0.4s ease;
 }
 
+.status-steps.pedido::after {
+  width: calc(0% - 80px);
+}
+
+.status-steps.faturado::after {
+  width: calc(30% - 80px);
+}
+
+.status-steps.transportadora::after {
+  width: calc(47% - 80px);
+}
+
+.status-steps.caminho::after {
+  width: calc(70% - 80px);
+}
+
+.status-steps.saiu::after {
+  width: calc(86% - 80px);
+}
+
+.status-steps.entregue::after {
+  width: calc(98% - 80px);
+}
+
 .step {
-  flex: 1;
   text-align: center;
   position: relative;
   z-index: 2;
 }
 
 .step-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: white;
   border: 3px solid #e0e0e0;
   border-radius: 50%;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,8 +401,8 @@
 }
 
 .step-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   transition: all 0.3s;
 }
 
@@ -394,11 +415,13 @@
 }
 
 .step-label {
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 600;
   color: #666;
   transition: all 0.3s;
-  line-height: 1.4;
+  line-height: 1.2;
+  max-width: 60px;
+  overflow: hidden;
 }
 
 .step.active .step-label {
@@ -411,29 +434,7 @@
 }
 
 @media (max-width: 768px) {
-  .status-steps {
-    padding: 20px;
-  }
-
-  .step-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  .step-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
   .step-label {
-    font-size: 10px;
-  }
-
-  .status-steps::before,
-  .status-steps::after {
-    top: 22px;
-    left: 20px;
-    right: 20px;
-    width: calc(100% - 40px);
+    font-size: 7px;
   }
 }
