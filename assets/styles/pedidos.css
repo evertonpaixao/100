@@ -216,7 +216,7 @@
 }
 
 .modal-button {
-  background-color: #4caf50;
+  background-color: #7a6948;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -302,5 +302,138 @@
     .item.flex
     .info-pedido:last-child {
     font-weight: bold;
+  }
+}
+
+/* Apenas a classe status-steps e seus elementos */
+.status-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 100%;
+}
+
+.status-steps::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  right: 40px;
+  height: 3px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.status-steps::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #7a6948 var(--progress-percent, 0%),
+    #e0e0e0 var(--progress-percent, 0%)
+  );
+  width: calc(100% - 80px);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  position: relative;
+  background-color: white;
+}
+
+.step.active .step-icon {
+  border-color: #7a6948;
+  background: linear-gradient(135deg, #7a6948, #272727);
+  box-shadow: 0 0 0 5px rgba(34, 34, 34, 0.2);
+  transform: scale(1.05);
+}
+
+.step.completed .step-icon {
+  border-color: #7a6948;
+  background: #7a6948;
+}
+
+.step-icon svg {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s;
+}
+
+.step.active .step-icon svg {
+  filter: brightness(0) invert(1);
+}
+
+.step.completed .step-icon svg {
+  filter: brightness(0) invert(1);
+}
+
+.step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s;
+  line-height: 1.4;
+}
+
+.step.active .step-label {
+  color: #7a6948;
+  font-weight: 700;
+}
+
+.step.completed .step-label {
+  color: #7a6948;
+}
+
+@media (max-width: 768px) {
+  .status-steps {
+    padding: 20px;
+  }
+
+  .step-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .step-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .step-label {
+    font-size: 10px;
+  }
+
+  .status-steps::before,
+  .status-steps::after {
+    top: 22px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
   }
 }
