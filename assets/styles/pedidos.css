@@ -344,27 +344,33 @@
 }
 
 .status-steps.feito::after {
-  width: calc(0% - 80px);
+  width: 1%;
+  max-width: 950px;
 }
 
 .status-steps.faturado::after {
-  width: calc(30% - 80px);
+  width: 20%;
+  max-width: 950px;
 }
 
 .status-steps.transportadora::after {
-  width: calc(47% - 80px);
+  width: 41%;
+  max-width: 950px;
 }
 
 .status-steps.caminho::after {
-  width: calc(70% - 80px);
+  width: 60%;
+  max-width: 550px;
 }
 
 .status-steps.saiu::after {
-  width: calc(86% - 80px);
+  width: 79%;
+  max-width: 950px;
 }
 
 .status-steps.entregue::after {
-  width: calc(98% - 80px);
+  width: 94%;
+  max-width: 950px;
 }
 
 .step {
@@ -436,5 +442,11 @@
 @media (max-width: 768px) {
   .step-label {
     font-size: 7px;
+  }
+}
+
+@media (max-width: 440x) {
+  .step-label {
+    display: none;
   }
 }
