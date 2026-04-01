@@ -320,25 +320,13 @@
                                                     NOVO CARTÃO
                                                 </span>
                                             </label>
-                                            <!-- <div class="content-parcelas cartao-de-credito">
-                                                <p class="name-pagamento">Parcelas</p>
-                                                <select id="select-parcelas" name="parcelas" required>
-                                                    <option value="">Selecione a quantidade</option>
-                                                    <option value="1x">1x de R$ 150,00 sem juros</option>
-                                                    <option value="2x">2x de R$ 75,00 sem juros</option>
-                                                    <option value="3x">3x de R$ 50,00 sem juros</option>
-                                                    <option value="4x">4x de R$ 150,00 com juros</option>
-                                                    <option value="5x">5x de R$ 75,00 com juros</option>
-                                                    <option value="6x">6x de R$ 50,00 com juros</option>
-                                                </select>
-                                            </div> -->
                                         </div>
                                         <div class="pagamento">
                                             <input type="radio" id="boleto" name="pagamento" value="boleto">
                                             <label for="boleto">
                                                 <span class="btn-metodo">
                                                     BOLETO
-                                                </span class="btn-metodo">
+                                                </span>
                                             </label>
                                         </div>
                                         <div class="pagamento">
@@ -346,7 +334,7 @@
                                             <label for="pix">
                                                 <span class="btn-metodo">
                                                     PIX
-                                                </span class="btn-metodo">
+                                                </span>
                                             </label>
                                         </div>
                                     </div>
@@ -563,6 +551,33 @@
 
     <!-- Scripts - Método de Pagamento -->
     <script src="assets/scripts/metodo-de-pagamento.js"></script>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function (e) {
+            const pagamentoSelecionado = document.querySelector('input[name="pagamento"]:checked');
+
+            if (!pagamentoSelecionado) {
+                e.preventDefault();
+                alert('Por favor, selecione uma forma de pagamento antes de continuar!');
+                return false;
+            }
+
+            const valor = pagamentoSelecionado.value;
+
+            switch (valor) {
+                case 'boleto':
+                    this.action = 'pagamento-finalizado-boleto.html';
+                    break;
+                case 'pix':
+                    this.action = 'pagamento-finalizado-pix.html';
+                    break;
+                default:
+                    this.action = 'pagamento-finalizado-cartao.html';
+            }
+
+            // O formulário será enviado normalmente com o action correto
+        });
+    </script>
 
 </body>
 

@@ -1,0 +1,51 @@
+.comocomprar .box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+
+.comocomprar .box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.comocomprar .box .item {
+  width: 33.33%;
+}
+
+.comocomprar .box .item .content-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 0px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.comocomprar .box .item .content-box .number {
+  color: #626262;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.comocomprar .box .item .content-box .section-title {
+  color: #424242;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+@media (max-width: 890px) {
+  .comocomprar .box {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .comocomprar .box .item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+  .comocomprar .box .item .content-box .section-title {
+    font-size: 1.3rem !important;
+  }
+}
