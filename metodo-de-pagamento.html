@@ -59,41 +59,11 @@
         </div>
     </header>
 
-    <!-- Modal de sucesso -->
-    <div id="success-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-icon">✅</div>
-            <h3 class="modal-title">Sucesso!</h3>
-            <p class="modal-message">Edição salvo com sucesso!</p>
-            <button class="modal-button" id="modal-ok-btn">OK</button>
-        </div>
-    </div>
-
-    <!-- Modal de sucesso - Endereço -->
-    <div id="success-modal-address" class="modal">
-        <div class="modal-content">
-            <div class="modal-icon">✅</div>
-            <h3 class="modal-title">Sucesso!</h3>
-            <p class="modal-message">Cadastro efetivado com sucesso!</p>
-            <button class="modal-button" id="modal-ok-btn-address">OK</button>
-        </div>
-    </div>
-
-    <!-- Modal de sucesso - Endereço -->
-    <div id="success-modal-address-editar" class="modal">
-        <div class="modal-content">
-            <div class="modal-icon">✅</div>
-            <h3 class="modal-title">Sucesso!</h3>
-            <p class="modal-message">Edição efetivada com sucesso!</p>
-            <button class="modal-button" id="modal-ok-btn-address-editar">OK</button>
-        </div>
-    </div>
-
     <!-- metodo -->
     <section id="metodo" class="page">
         <div class="metodo container">
             <div class="row">
-                <form id="form" class="form" action="">
+                <form id="form" class="form" action="pagamento-finalizado.html" method="POST">
 
                     <div class="flex">
                         <div class="column">
@@ -175,17 +145,17 @@
                                             <div class="form-group colunm">
                                                 <label for="cep-cadastro">CEP</label>
                                                 <input id="cep-cadastro" class="cep" type="text" name="cep"
-                                                    pattern="\d{5}-\d{3}" maxlength="9" required>
+                                                    pattern="\d{5}-\d{3}" maxlength="9">
                                             </div>
                                             <div class="form-group colunm">
                                                 <label for="rua-cadastro">Rua</label>
-                                                <input id="rua-cadastro" type="text" name="rua" required>
+                                                <input id="rua-cadastro" type="text" name="rua">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group colunm">
                                                 <label for="numero-cadastro">Número</label>
-                                                <input id="numero-cadastro" type="text" name="numero" required>
+                                                <input id="numero-cadastro" type="text" name="numero">
                                             </div>
                                             <div class="form-group colunm">
                                                 <label for="complemento-cadastro">Complemento</label>
@@ -199,7 +169,7 @@
                                         <div class="form-row">
                                             <div class="form-group colunm-two">
                                                 <label>Estado</label>
-                                                <select id="estado-cadastro" name="estado" required disabled>
+                                                <select id="estado-cadastro" name="estado" disabled>
                                                     <option value="">Selecione o estado</option>
                                                     <option value="AC">Acre (AC)</option>
                                                     <option value="AL">Alagoas (AL)</option>
@@ -232,7 +202,7 @@
                                             </div>
                                             <div class="form-group colunm-two">
                                                 <label>Cidade</label>
-                                                <select id="cidade-cadastro" name="cidade" required disabled>
+                                                <select id="cidade-cadastro" name="cidade" disabled>
                                                     <option value="">Selecione a cidade</option>
                                                 </select>
                                             </div>
@@ -240,7 +210,7 @@
                                         <div class="form-row">
                                             <div class="form-group colunm-two">
                                                 <label>Tipo de endereço</label>
-                                                <select name="tipo" required>
+                                                <select name="tipo">
                                                     <option value="">Selecione</option>
                                                     <option value="Casa">Casa</option>
                                                     <option value="Trabalho">Trabalho</option>
@@ -296,7 +266,7 @@
                                                 <p class="number-pagamento">Final 0072</p>
                                                 <div class="content-parcelas">
                                                     <p class="name-pagamento">Parcelas</p>
-                                                    <select id="select-parcelas" name="parcelas" required>
+                                                    <select id="select-parcelas" name="parcelas">
                                                         <option value="">Selecione a quantidade</option>
                                                         <option value="1x">1x de <b>R$ 150,00</b> sem juros</option>
                                                         <option value="2x">2x de <b>R$ 75,00</b> sem juros</option>
@@ -320,7 +290,7 @@
                                                 <p class="number-pagamento">Final 1234</p>
                                                 <div class="content-parcelas">
                                                     <p class="name-pagamento">Parcelas</p>
-                                                    <select id="select-parcelas" name="parcelas" required>
+                                                    <select id="select-parcelas" name="parcelas">
                                                         <option value="">Selecione a quantidade</option>
                                                         <option value="1x">1x de R$ 150,00 sem juros</option>
                                                         <option value="2x">2x de R$ 75,00 sem juros</option>
@@ -386,8 +356,9 @@
                                             <div class="form-group">
                                                 <label for="numero">Número do Cartão</label>
                                                 <div class="cartao-input-wrapper">
-                                                    <input type="text" id="numero" name="numero" class="cartao-input"
-                                                        placeholder="**** **** **** ****" maxlength="19" required="">
+                                                    <input type="text" id="numero" name="numero-cartao"
+                                                        class="cartao-input" placeholder="**** **** **** ****"
+                                                        maxlength="19">
                                                     <div class="bandeira-container">
                                                         <img src="" alt="Bandeira" id="bandeira-img"
                                                             class="bandeira-img">
@@ -400,7 +371,7 @@
                                         <div class="form-row">
                                             <div class="form-group">
                                                 <label for="nome">Nome Impresso no Cartão</label>
-                                                <input type="text" id="nome" name="nome" required="">
+                                                <input type="text" id="nome" name="nome-cartao">
                                             </div>
                                         </div>
 
@@ -510,6 +481,10 @@
                                         <p class="valor-pedido">R$ 359,60</p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div id="confirmar-pedido" class="confirmar-pedido gsap-reveal">
+                                <button type="submit" class="btn btn-confirmar-pedido">Confirmar pedido</button>
                             </div>
 
 

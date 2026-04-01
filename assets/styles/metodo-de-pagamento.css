@@ -592,6 +592,22 @@
   margin-left: 21px;
 }
 
+.btn-confirmar-pedido {
+  letter-spacing: 2px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  position: relative;
+  bottom: 0;
+  margin-top: 15px;
+  margin: 0 auto;
+  background-color: #97865c;
+  display: table;
+}
+
+.btn-confirmar-pedido:hover {
+  background-color: #4caf50;
+}
+
 /* Estilos do Modal */
 .modal {
   display: none;
@@ -696,6 +712,21 @@
   }
   .pedido .content-pedido.produtos .item {
     width: 100%;
+  }
+  .btn-confirmar-pedido {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .metodo-subtitle,
+  .pedido .item .title-pedido {
+    font-size: 1.2rem;
+  }
+  .options-frete .item label {
+    font-size: 1rem;
+  }
+  .options-frete .item label small {
+    margin-left: 0;
   }
 }
 
