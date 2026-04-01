@@ -340,6 +340,7 @@
 
 .btn-metodo {
   font-weight: 600;
+  text-align: center;
 }
 
 .bandeira-container {
@@ -524,6 +525,73 @@
   font-size: 1.2rem;
 }
 
+.cartao-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cartao-input,
+.validade-input,
+.cvv-input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.cartao-input {
+  padding-right: 50px; /* Espaço para a bandeira */
+}
+
+.cartao-input:focus,
+.validade-input:focus,
+.cvv-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.cartao-input.error,
+.validade-input.error,
+.cvv-input.error {
+  border-color: #f44336;
+}
+
+.bandeira-container {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bandeira-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bandeira-img.visible {
+  opacity: 1;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: -7px;
+  min-height: 18px;
+  position: absolute;
+  margin-left: 21px;
+}
+
 /* Estilos do Modal */
 .modal {
   display: none;
@@ -609,4 +677,48 @@
 
 .modal-button.error:hover {
   background-color: #da190b;
+}
+
+@media (max-width: 1099px) {
+  .pedido-container {
+    flex-flow: column;
+  }
+  .pedido-container .resumo {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row,
+  .options-frete {
+    flex-flow: column;
+  }
+  .pedido .content-pedido.produtos .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .address label,
+  .pagamento label {
+    flex-flow: column;
+    align-items: self-start;
+  }
+  .options-formas .pagamento label {
+    align-items: center;
+  }
+  #select-parcelas {
+    width: 100%;
+  }
+  .selecionado {
+    margin-top: 10px;
+  }
+  .cadastro-dados-pessoais,
+  .address-saves,
+  .entrega,
+  .pagamento-method,
+  .pedido-container {
+    padding: 30px 15px;
+  }
 }

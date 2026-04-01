@@ -587,26 +587,7 @@
     <script src="assets/scripts/menu-responsivo.js"></script>
 
     <!-- Scripts - Método de Pagamento -->
-    <script src="assets/scripts/informacoes-pessoais.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const radios = document.querySelectorAll('input[name="pagamento"]');
-            const formCartao = document.getElementById("form-cadastro-cartao");
-
-            function toggleForm() {
-                const selected = document.querySelector('input[name="pagamento"]:checked');
-                formCartao.style.display = selected && selected.value === "cartao" ? "block" : "none";
-            }
-
-            radios.forEach(radio => {
-                radio.addEventListener("change", toggleForm);
-            });
-
-            toggleForm(); // roda ao carregar
-        });
-    </script>
-
+    <script src="assets/scripts/metodo-de-pagamento.js"></script>
 
 </body>
 
