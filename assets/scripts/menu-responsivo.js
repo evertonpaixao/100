@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const clickable = chevron || item;
         
         clickable.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 915) {
                 e.preventDefault();
                 
                 // Fecha outros submenus abertos
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ajuste ao redimensionar a tela
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 915) {
             hamburgerBtn.classList.remove('active');
             navMenu.classList.remove('active');
             overlay.classList.remove('active');
