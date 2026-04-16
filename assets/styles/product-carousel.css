@@ -77,7 +77,7 @@
   color: #fff;
   box-shadow: none;
   margin-top: 1.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition:
     background-color 0.3s ease,
     color 0.3s ease; /* Smooth transition */
@@ -137,7 +137,7 @@
 /* Ajuste para manter o texto legível */
 .product-card .product-content h3 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   font-weight: 400;
   margin: 0.5rem 0 0rem;
@@ -189,7 +189,7 @@
 }
 
 .card-footer {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

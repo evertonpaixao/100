@@ -16,7 +16,7 @@
 }
 
 .painel .row .flex .column .suporte .item .title-suporte {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .painel .row .flex .column .suporte .item .info-suporte {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
 }

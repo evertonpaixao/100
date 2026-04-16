@@ -4,7 +4,7 @@
 }
 
 .painel-title {
-  font-size: 3.6rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
   font-weight: 500;
@@ -40,7 +40,7 @@ hr {
 }
 
 .painel .row.header .flex .text-bemvindo {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -78,7 +78,7 @@ hr {
 
 .painel .row .flex .column .menu ul li {
   list-style: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #fff;
   width: 100%;

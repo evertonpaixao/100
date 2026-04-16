@@ -31,7 +31,7 @@ p {
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: #424242;
   margin-bottom: 0.5rem;
   font-weight: 100;
@@ -522,7 +522,7 @@ p {
   padding: 0.8rem 2rem;
   border-radius: 10px;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 4px 8px rgba(0, 40, 0, 0.2);
@@ -780,8 +780,9 @@ p {
   transition: background-color 0.3s;
   white-space: nowrap;
   letter-spacing: 0px;
-  max-width: 275px;
+  max-width: 325px;
   margin: 0 auto;
+  text-align: center;
 }
 
 #footer .footer .footer-item .link:hover {
@@ -1003,13 +1004,17 @@ p {
   .redes img {
     width: 100%;
   }
+  #form-news input[type="email"] {
+    font-size: 0.8rem;
+    padding: 15px 100px 15px 20px;
+  }
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .section-title {
     font-size: 1.6rem !important;
   }
   #footer .section-title {
     font-size: 1.3rem !important;
   }
-}
+} */

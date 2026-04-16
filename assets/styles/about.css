@@ -26,7 +26,7 @@
 }
 
 .about .section-title big {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .about .figure-about .img-about {
@@ -149,12 +149,12 @@
 
 .about .calendar .calendar-content .calendar-item .day {
   color: #dcdcdc;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .about .calendar .calendar-content .calendar-item .location {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -213,12 +213,12 @@
 
 .count-item span {
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .count-item p {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   font-weight: 500;
   text-transform: initial !important;
@@ -396,7 +396,7 @@
 
 /* year label */
 .card-year {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
   color: #626262;
@@ -407,7 +407,7 @@
 
 /* headline (like "O COMEÇO") */
 .card-headline {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #626262;
   margin: 0.5rem 0 1rem 0;

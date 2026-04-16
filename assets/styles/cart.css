@@ -3,7 +3,7 @@
 }
 
 .carrinho-title {
-  font-size: 3.6rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
   font-weight: 500;
@@ -17,7 +17,7 @@
 }
 
 .carrinho-subtitle {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -62,12 +62,16 @@
 }
 
 .product.cart-list .header {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
   display: flex;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   align-items: center;
+}
+
+.product.cart-list .header .preco {
+  font-size: 1.2rem;
 }
 
 .product.cart-list .content-produto {
@@ -124,7 +128,7 @@
   height: 40px;
   text-align: center;
   border: 1px solid #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   outline: none;
 }
 
@@ -133,7 +137,7 @@
   height: 40px;
   border: 1px solid #fff;
   background-color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -147,6 +151,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
 }
 
 .product.cart-list .excluir {
@@ -306,7 +311,7 @@
 }
 
 .product.cart.banner.resumo .resumo .content-description .item p {
-  font-size: 1.4375rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -319,7 +324,7 @@
 }
 
 .product.cart.banner.resumo .resumo .content-total .item p big {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -441,7 +446,7 @@
 
 .product.cart.frete.subtotal .subtotal h3 small {
   margin-bottom: 0px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 

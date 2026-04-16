@@ -25,12 +25,12 @@
 } */
 
 .painel .row .flex .column .card .item .name-card {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 .painel .row .flex .column .card .item .number-card {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -42,7 +42,7 @@
   display: block;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   max-width: 250px;
@@ -73,7 +73,7 @@
   padding: 10px 30px;
   border: 1px solid #dcdcdc;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   max-width: 150px;
@@ -232,7 +232,7 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   border: 1px solid #dcdcdc;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   max-width: 150px;

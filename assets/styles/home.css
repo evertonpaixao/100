@@ -200,7 +200,7 @@
 
 .objetivo-card .objetivo-content h3 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   font-weight: 400;
   padding-top: 1rem;
@@ -329,7 +329,7 @@
   .featured-content.column-one
   .content-limited
   h2.section-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #section-destaque
@@ -342,7 +342,7 @@
 }
 
 #section-destaque .row .featured-item .featured-content h3.section-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #section-destaque .row .featured-item .product-featured {
